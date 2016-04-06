@@ -4,27 +4,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Lista Gado</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Cadastrar Novo Boi", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DTNascimento)
+            Brinco
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TPSexo)
+            Data Nascimento
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DTInseminacao)
+            Sexo
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DTDesamamentacao)
+            Data Desamamentação
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DTProcriacao)
+            Data Última Inseminação
+        </th>
+        <th>
+            Data Última Procriação
         </th>
         <th></th>
     </tr>
@@ -32,24 +35,27 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.NRBrinco)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.DTNascimento)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TPSexo)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DTInseminacao)
+            @Html.DisplayFor(modelItem => item.DTDesamamentacao)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DTDesamamentacao)
+            @Html.DisplayFor(modelItem => item.DTInseminacao)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DTProcriacao)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.NRBrinco }) |
-            @Html.ActionLink("Details", "Details", new { id=item.NRBrinco }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.NRBrinco })
+            @Html.ActionLink("Editar", "Edit", new { id=item.NRBrinco }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.NRBrinco }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.NRBrinco })
         </td>
     </tr>
 }
