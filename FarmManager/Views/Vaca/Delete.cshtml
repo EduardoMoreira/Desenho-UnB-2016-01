@@ -1,0 +1,64 @@
+﻿@model FarmManager.Models.Vaca
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vaca</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPSexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPSexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTInseminacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTInseminacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTDesamamentacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTDesamamentacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTProcriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTProcriacao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

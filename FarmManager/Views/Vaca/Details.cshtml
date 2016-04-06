@@ -1,0 +1,58 @@
+﻿@model FarmManager.Models.Vaca
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vaca</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPSexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPSexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTInseminacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTInseminacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTDesamamentacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTDesamamentacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTProcriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTProcriacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NRBrinco }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
