@@ -1,0 +1,65 @@
+﻿@model FarmManager.Models.TerraPlantio
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TerraPlantio</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DTPlantio, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DTPlantio)
+                @Html.ValidationMessageFor(model => model.DTPlantio)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DTColheita, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DTColheita)
+                @Html.ValidationMessageFor(model => model.DTColheita)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TPGrao, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TPGrao)
+                @Html.ValidationMessageFor(model => model.TPGrao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NRHectares, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NRHectares)
+                @Html.ValidationMessageFor(model => model.NRHectares)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

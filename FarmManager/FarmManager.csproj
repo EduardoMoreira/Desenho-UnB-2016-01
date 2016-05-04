@@ -164,6 +164,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PastoController.cs" />
+    <Compile Include="Controllers\PiqueteController.cs" />
+    <Compile Include="Controllers\TerraNuaController.cs" />
+    <Compile Include="Controllers\TerraPlantioController.cs" />
     <Compile Include="Controllers\VacaController.cs" />
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
@@ -172,6 +176,12 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Pasto.cs" />
+    <Compile Include="Models\Piquete.cs" />
+    <Compile Include="Models\Terra.cs" />
+    <Compile Include="Models\TerraCriacao.cs" />
+    <Compile Include="Models\TerraNua.cs" />
+    <Compile Include="Models\TerraPlantio.cs" />
     <Compile Include="Models\Vaca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -184,7 +194,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\Logo.png" />
-    <Content Include="Logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Eduardo.pubxml" />
@@ -230,6 +239,26 @@
     <Content Include="Views\Vaca\Details.cshtml" />
     <Content Include="Views\Vaca\Edit.cshtml" />
     <Content Include="Views\Vaca\Index.cshtml" />
+    <Content Include="Views\TerraPlantio\Create.cshtml" />
+    <Content Include="Views\TerraPlantio\Delete.cshtml" />
+    <Content Include="Views\TerraPlantio\Details.cshtml" />
+    <Content Include="Views\TerraPlantio\Edit.cshtml" />
+    <Content Include="Views\TerraPlantio\Index.cshtml" />
+    <Content Include="Views\Piquete\Create.cshtml" />
+    <Content Include="Views\Piquete\Delete.cshtml" />
+    <Content Include="Views\Piquete\Details.cshtml" />
+    <Content Include="Views\Piquete\Edit.cshtml" />
+    <Content Include="Views\Piquete\Index.cshtml" />
+    <Content Include="Views\Pasto\Create.cshtml" />
+    <Content Include="Views\Pasto\Delete.cshtml" />
+    <Content Include="Views\Pasto\Details.cshtml" />
+    <Content Include="Views\Pasto\Edit.cshtml" />
+    <Content Include="Views\Pasto\Index.cshtml" />
+    <Content Include="Views\TerraNua\Create.cshtml" />
+    <Content Include="Views\TerraNua\Delete.cshtml" />
+    <Content Include="Views\TerraNua\Details.cshtml" />
+    <Content Include="Views\TerraNua\Edit.cshtml" />
+    <Content Include="Views\TerraNua\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

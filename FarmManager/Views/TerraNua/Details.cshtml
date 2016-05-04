@@ -1,0 +1,34 @@
+﻿@model FarmManager.Models.TerraNua
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TerraNua</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DETerra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DETerra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NRHectares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRHectares)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CDTerra }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

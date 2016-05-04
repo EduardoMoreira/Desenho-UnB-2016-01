@@ -1,0 +1,56 @@
+﻿@model FarmManager.Models.TerraPlantio
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TerraPlantio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTPlantio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTPlantio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTColheita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTColheita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPGrao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPGrao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NRHectares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRHectares)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
