@@ -23,7 +23,7 @@ namespace FarmManager.DAL
 
         public System.Data.Entity.DbSet<FarmManager.Models.Piquete> Piquetes { get; set; }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.Pasto> Pastoes { get; set; }
+        public System.Data.Entity.DbSet<FarmManager.Models.Pasto> Pastos { get; set; }
 
         public System.Data.Entity.DbSet<FarmManager.Models.TerraNua> TerraNuas { get; set; }
     }

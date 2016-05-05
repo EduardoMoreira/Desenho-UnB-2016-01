@@ -18,7 +18,7 @@ namespace FarmManager.Controllers
         // GET: /Pasto/
         public ActionResult Index()
         {
-            return View(db.Pastoes.ToList());
+            return View(db.Pastos.ToList());
         }
 
         // GET: /Pasto/Details/5
@@ -28,7 +28,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pasto pasto = db.Pastoes.Find(id);
+            Pasto pasto = db.Pastos.Find(id);
             if (pasto == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace FarmManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Pastoes.Add(pasto);
+                db.Pastos.Add(pasto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pasto pasto = db.Pastoes.Find(id);
+            Pasto pasto = db.Pastos.Find(id);
             if (pasto == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pasto pasto = db.Pastoes.Find(id);
+            Pasto pasto = db.Pastos.Find(id);
             if (pasto == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace FarmManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Pasto pasto = db.Pastoes.Find(id);
-            db.Pastoes.Remove(pasto);
+            Pasto pasto = db.Pastos.Find(id);
+            db.Pastos.Remove(pasto);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

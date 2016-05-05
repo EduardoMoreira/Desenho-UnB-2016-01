@@ -23,10 +23,16 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
-                    <li>@Html.ActionLink("Pasto", "Index", "Pasto")</li>
-                    <li>@Html.ActionLink("Piquete", "Index", "Piquete")</li>
-                    <li>@Html.ActionLink("Terra Plantio", "Index", "TerraPlantio")</li>
-                    <li>@Html.ActionLink("Terra Nua", "Index", "TerraNua")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Terras<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Pasto", "Index", "Pasto")</li>
+                            <li>@Html.ActionLink("Piquete", "Index", "Piquete")</li>
+                            <li>@Html.ActionLink("Terra Plantio", "Index", "TerraPlantio")</li>
+                            <li>@Html.ActionLink("Terra Nua", "Index", "TerraNua")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Relatório Inventário", "Index", "RelatorioInventario")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
