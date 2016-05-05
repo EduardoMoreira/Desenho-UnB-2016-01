@@ -7,7 +7,7 @@
 <h2>Lista de Vacas</h2>
 
 <p>
-    @Html.ActionLink("Cadastrar Vaca", "Create")
+    @Html.ActionLink("Cadastrar uma nova vaca", "Create")
 </p>
 <table class="table">
     <tr>
@@ -55,7 +55,7 @@
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.NRBrinco }) |
             @Html.ActionLink("Detalhes", "Details", new { id=item.NRBrinco }) |
-            @Html.ActionLink("Deletar", "Delete", new { id=item.NRBrinco })
+            @Html.ActionLink("Excluir", "Delete", new { id=item.NRBrinco })
         </td>
     </tr>
 }
