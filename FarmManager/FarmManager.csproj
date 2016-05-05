@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -166,11 +167,17 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
+    <Compile Include="Controllers\RelatorioInventarioController.cs" />
     <Compile Include="Controllers\TerraNuaController.cs" />
     <Compile Include="Controllers\TerraPlantioController.cs" />
     <Compile Include="Controllers\VacaController.cs" />
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
+    <Compile Include="DSInventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSInventario.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +192,13 @@
     <Compile Include="Models\Vaca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Relatorios\RelatorioInventario.aspx.cs">
+      <DependentUpon>RelatorioInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Relatorios\RelatorioInventario.aspx.designer.cs">
+      <DependentUpon>RelatorioInventario.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -196,6 +210,17 @@
     <Content Include="Images\Logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="DSInventario.xsc">
+      <DependentUpon>DSInventario.xsd</DependentUpon>
+    </Content>
+    <None Include="DSInventario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSInventario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DSInventario.xss">
+      <DependentUpon>DSInventario.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\Eduardo.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -209,6 +234,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Relatorios\RelatorioInventario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -272,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Relatorio\Inventario.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
