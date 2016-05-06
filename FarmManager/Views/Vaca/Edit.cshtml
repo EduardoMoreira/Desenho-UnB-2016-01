@@ -18,7 +18,7 @@
         @Html.HiddenFor(model => model.NRBrinco)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DTNascimento, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DTNascimento, "Data Nascimento", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DTNascimento)
                 @Html.ValidationMessageFor(model => model.DTNascimento)
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TPSexo, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.TPSexo, "Sexo", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TPSexo)
                 @Html.ValidationMessageFor(model => model.TPSexo)
@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DTInseminacao, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DTInseminacao, "Data Última Inseminação", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DTInseminacao)
                 @Html.ValidationMessageFor(model => model.DTInseminacao)
@@ -42,7 +42,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DTDesamamentacao, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DTDesamamentacao, "Data Desamamentação", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DTDesamamentacao)
                 @Html.ValidationMessageFor(model => model.DTDesamamentacao)
@@ -50,7 +50,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DTProcriacao, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DTProcriacao, "Data Última Procriação", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DTProcriacao)
                 @Html.ValidationMessageFor(model => model.DTProcriacao)

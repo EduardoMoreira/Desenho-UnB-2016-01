@@ -18,7 +18,7 @@
         @Html.HiddenFor(model => model.CDTerra)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DETerra, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DETerra, "Descrição da terra", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DETerra)
                 @Html.ValidationMessageFor(model => model.DETerra)
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NRHectares, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.NRHectares, "Número de hectares", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NRHectares)
                 @Html.ValidationMessageFor(model => model.NRHectares)
