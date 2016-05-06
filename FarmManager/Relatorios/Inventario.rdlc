@@ -9,7 +9,7 @@
               <Width>2.53505cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.63771cm</Width>
+              <Width>3.95521cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -18,40 +18,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox1">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Código</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox1</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>LightGrey</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox3">
+                    <Textbox Name="Textbox6">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -82,33 +49,31 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="CDTerra">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CDTerra.Value</Value>
-                              <Style />
+                              <Value>Capacidade de Gado</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>CDTerra</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -117,9 +82,14 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="NRHectares">
+                    <Textbox Name="NRHectares4">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -147,6 +117,36 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="NRMaximoVacas">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!NRMaximoVacas.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>NRMaximoVacas</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -154,29 +154,31 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox33">
+                    <Textbox Name="Textbox36">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total:</Value>
-                              <Style />
+                              <Value>=Sum(Fields!NRHectares.Value)</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox33</rd:DefaultName>
+                      <rd:DefaultName>Textbox34</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <RightBorder>
+                        <LeftBorder>
                           <Style>None</Style>
-                        </RightBorder>
+                        </LeftBorder>
                         <BackgroundColor>#d2825a</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -195,8 +197,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!NRHectares.Value)</Value>
-                              <Style />
+                              <Value>=Sum(Fields!NRMaximoVacas.Value)</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -294,7 +298,9 @@
                         <TextRuns>
                           <TextRun>
                             <Value>=Fields!TPTerra.Value</Value>
-                            <Style />
+                            <Style>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
                           </TextRun>
                         </TextRuns>
                         <Style />
@@ -306,6 +312,9 @@
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <RightBorder>
+                        <Style>None</Style>
+                      </RightBorder>
                       <BackgroundColor>#d2825a</BackgroundColor>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -330,7 +339,7 @@
         <Top>4.82079cm</Top>
         <Left>3.73132cm</Left>
         <Height>1.8cm</Height>
-        <Width>8.67276cm</Width>
+        <Width>8.99026cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -377,7 +386,7 @@
               <Width>2.53505cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.63771cm</Width>
+              <Width>3.95521cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -532,7 +541,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Total:</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -544,6 +555,9 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <LeftBorder>
+                          <Style>None</Style>
+                        </LeftBorder>
                         <RightBorder>
                           <Style>None</Style>
                         </RightBorder>
@@ -566,7 +580,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Count(Fields!TPSexo.Value)</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -664,7 +680,9 @@
                         <TextRuns>
                           <TextRun>
                             <Value>=IIf(Fields!TPSexo.Value=1,"Fêmea","Macho")</Value>
-                            <Style />
+                            <Style>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
                           </TextRun>
                         </TextRuns>
                         <Style />
@@ -676,6 +694,9 @@
                         <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <RightBorder>
+                        <Style>None</Style>
+                      </RightBorder>
                       <BackgroundColor>=IIf(Fields!TPSexo.Value=0,"LightBlue","Pink")</BackgroundColor>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -708,7 +729,7 @@
         <Top>0.95278cm</Top>
         <Left>3.73132cm</Left>
         <Height>1.8cm</Height>
-        <Width>8.67276cm</Width>
+        <Width>8.99026cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -827,7 +848,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox46</rd:DefaultName>
-          <Top>0cm</Top>
           <Left>13.3791cm</Left>
           <Height>0.6cm</Height>
           <Width>3.16647cm</Width>
@@ -924,6 +944,10 @@
         </Field>
         <Field Name="TPTerra">
           <DataField>TPTerra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NRMaximoVacas">
+          <DataField>NRMaximoVacas</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
