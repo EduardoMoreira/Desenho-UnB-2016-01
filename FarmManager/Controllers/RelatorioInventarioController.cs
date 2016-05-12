@@ -94,6 +94,15 @@ namespace FarmManager.Controllers
             }
         }
 
+        //Equipamento Rural
+        public DataTable DataTableEquipamentoRural
+        {
+            get
+            {
+                return ConvertToDatatable(db.EquipamentosRurais.ToList());
+            }
+        }
+
         #endregion
 
         #region metodos
@@ -110,6 +119,7 @@ namespace FarmManager.Controllers
             DataTableTerra.Merge(DataTableTerraNua);
             viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSTerra", DataTableTerra));
             viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSVaca", DataTableVaca));
+            viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSEquipamentoRural", DataTableEquipamentoRural));
 
             viewer.SizeToReportContent = true;
             viewer.Width = System.Web.UI.WebControls.Unit.Percentage(100);
