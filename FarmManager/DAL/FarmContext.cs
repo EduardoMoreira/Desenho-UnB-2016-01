@@ -19,12 +19,14 @@ namespace FarmManager.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.TerraPlantio> TerraPlantios { get; set; }
+        public System.Data.Entity.DbSet<FarmManager.Models.TerraPlantio> TerrasPlantios { get; set; }
 
         public System.Data.Entity.DbSet<FarmManager.Models.Piquete> Piquetes { get; set; }
 
         public System.Data.Entity.DbSet<FarmManager.Models.Pasto> Pastos { get; set; }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.TerraNua> TerraNuas { get; set; }
+        public System.Data.Entity.DbSet<FarmManager.Models.TerraNua> TerrasNuas { get; set; }
+
+        public System.Data.Entity.DbSet<FarmManager.Models.EquipamentoRural> EquipamentosRurais { get; set; }
     }
 }

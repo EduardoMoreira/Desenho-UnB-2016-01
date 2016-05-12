@@ -18,7 +18,7 @@ namespace FarmManager.Controllers
         // GET: /TerraPlantio/
         public ActionResult Index()
         {
-            return View(db.TerraPlantios.ToList());
+            return View(db.TerrasPlantios.ToList());
         }
 
         // GET: /TerraPlantio/Details/5
@@ -28,7 +28,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TerraPlantio terraplantio = db.TerraPlantios.Find(id);
+            TerraPlantio terraplantio = db.TerrasPlantios.Find(id);
             if (terraplantio == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace FarmManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.TerraPlantios.Add(terraplantio);
+                db.TerrasPlantios.Add(terraplantio);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TerraPlantio terraplantio = db.TerraPlantios.Find(id);
+            TerraPlantio terraplantio = db.TerrasPlantios.Find(id);
             if (terraplantio == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TerraPlantio terraplantio = db.TerraPlantios.Find(id);
+            TerraPlantio terraplantio = db.TerrasPlantios.Find(id);
             if (terraplantio == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace FarmManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            TerraPlantio terraplantio = db.TerraPlantios.Find(id);
-            db.TerraPlantios.Remove(terraplantio);
+            TerraPlantio terraplantio = db.TerrasPlantios.Find(id);
+            db.TerrasPlantios.Remove(terraplantio);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<FarmManager.Models.EquipamentoRural>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VLCompra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEEquipamentoRural)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STAlugado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTCompra)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VLCompra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEEquipamentoRural)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STAlugado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTCompra)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CDEquipamentoRural }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CDEquipamentoRural }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CDEquipamentoRural })
+        </td>
+    </tr>
+}
+
+</table>

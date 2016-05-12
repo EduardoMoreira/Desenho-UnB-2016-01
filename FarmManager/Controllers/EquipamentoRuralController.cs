@@ -6,112 +6,112 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using FarmManager.Models;
 using FarmManager.DAL;
+using FarmManager.Models;
 
 namespace FarmManager.Controllers
 {
-    public class TerraNuaController : Controller
+    public class EquipamentoRuralController : Controller
     {
         private FarmContext db = new FarmContext();
 
-        // GET: /TerraNua/
+        // GET: EquipamentoRural
         public ActionResult Index()
         {
-            return View(db.TerrasNuas.ToList());
+            return View(db.EquipamentosRurais.ToList());
         }
 
-        // GET: /TerraNua/Details/5
+        // GET: EquipamentoRural/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TerraNua terranua = db.TerrasNuas.Find(id);
-            if (terranua == null)
+            EquipamentoRural equipamentoRural = db.EquipamentosRurais.Find(id);
+            if (equipamentoRural == null)
             {
                 return HttpNotFound();
             }
-            return View(terranua);
+            return View(equipamentoRural);
         }
 
-        // GET: /TerraNua/Create
+        // GET: EquipamentoRural/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: /TerraNua/Create
+        // POST: EquipamentoRural/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="CDTerra,DETerra,NRHectares")] TerraNua terranua)
+        public ActionResult Create([Bind(Include = "CDEquipamentoRural,VLCompra,DEEquipamentoRural,STAlugado,DTCompra")] EquipamentoRural equipamentoRural)
         {
             if (ModelState.IsValid)
             {
-                db.TerrasNuas.Add(terranua);
+                db.EquipamentosRurais.Add(equipamentoRural);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(terranua);
+            return View(equipamentoRural);
         }
 
-        // GET: /TerraNua/Edit/5
+        // GET: EquipamentoRural/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TerraNua terranua = db.TerrasNuas.Find(id);
-            if (terranua == null)
+            EquipamentoRural equipamentoRural = db.EquipamentosRurais.Find(id);
+            if (equipamentoRural == null)
             {
                 return HttpNotFound();
             }
-            return View(terranua);
+            return View(equipamentoRural);
         }
 
-        // POST: /TerraNua/Edit/5
+        // POST: EquipamentoRural/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="CDTerra,DETerra,NRHectares")] TerraNua terranua)
+        public ActionResult Edit([Bind(Include = "CDEquipamentoRural,VLCompra,DEEquipamentoRural,STAlugado,DTCompra")] EquipamentoRural equipamentoRural)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(terranua).State = EntityState.Modified;
+                db.Entry(equipamentoRural).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(terranua);
+            return View(equipamentoRural);
         }
 
-        // GET: /TerraNua/Delete/5
+        // GET: EquipamentoRural/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TerraNua terranua = db.TerrasNuas.Find(id);
-            if (terranua == null)
+            EquipamentoRural equipamentoRural = db.EquipamentosRurais.Find(id);
+            if (equipamentoRural == null)
             {
                 return HttpNotFound();
             }
-            return View(terranua);
+            return View(equipamentoRural);
         }
 
-        // POST: /TerraNua/Delete/5
+        // POST: EquipamentoRural/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            TerraNua terranua = db.TerrasNuas.Find(id);
-            db.TerrasNuas.Remove(terranua);
+            EquipamentoRural equipamentoRural = db.EquipamentosRurais.Find(id);
+            db.EquipamentosRurais.Remove(equipamentoRural);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

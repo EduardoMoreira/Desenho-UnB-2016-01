@@ -60,7 +60,7 @@ namespace FarmManager.Controllers
         {
             get
             {
-                var dt = ConvertToDatatable(db.TerraNuas.ToList());
+                var dt = ConvertToDatatable(db.TerrasNuas.ToList());
 
                 System.Data.DataColumn colunaTipoTerra = new System.Data.DataColumn("TPTerra", typeof(System.String));
                 colunaTipoTerra.DefaultValue = "Nua";
@@ -75,7 +75,7 @@ namespace FarmManager.Controllers
         {
             get
             {
-                var dt = ConvertToDatatable(db.TerraPlantios.ToList());
+                var dt = ConvertToDatatable(db.TerrasPlantios.ToList());
 
                 System.Data.DataColumn colunaTipoTerra = new System.Data.DataColumn("TPTerra", typeof(System.String));
                 colunaTipoTerra.DefaultValue = "Plantio";
