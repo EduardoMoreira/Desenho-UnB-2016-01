@@ -322,6 +322,8 @@ namespace FarmManager.Relatorios {
             
             private global::System.Data.DataColumn columnTPTerra;
             
+            private global::System.Data.DataColumn columnNRMaximoVacas;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TerraDataTable() {
@@ -389,6 +391,14 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NRMaximoVacasColumn {
+                get {
+                    return this.columnNRMaximoVacas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -424,13 +434,14 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TerraRow AddTerraRow(int TPGrao, int NRHectares, string TPTerra) {
+            public TerraRow AddTerraRow(int TPGrao, int NRHectares, string TPTerra, string NRMaximoVacas) {
                 TerraRow rowTerraRow = ((TerraRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TPGrao,
                         NRHectares,
-                        TPTerra};
+                        TPTerra,
+                        NRMaximoVacas};
                 rowTerraRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTerraRow);
                 return rowTerraRow;
@@ -464,6 +475,7 @@ namespace FarmManager.Relatorios {
                 this.columnTPGrao = base.Columns["TPGrao"];
                 this.columnNRHectares = base.Columns["NRHectares"];
                 this.columnTPTerra = base.Columns["TPTerra"];
+                this.columnNRMaximoVacas = base.Columns["NRMaximoVacas"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,6 +489,8 @@ namespace FarmManager.Relatorios {
                 base.Columns.Add(this.columnNRHectares);
                 this.columnTPTerra = new global::System.Data.DataColumn("TPTerra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTPTerra);
+                this.columnNRMaximoVacas = new global::System.Data.DataColumn("NRMaximoVacas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNRMaximoVacas);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCDTerra}, true));
                 this.columnCDTerra.AutoIncrement = true;
@@ -1008,6 +1022,22 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NRMaximoVacas {
+                get {
+                    try {
+                        return ((string)(this[this.tableTerra.NRMaximoVacasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NRMaximoVacas\' in table \'Terra\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTerra.NRMaximoVacasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTPTerraNull() {
                 return this.IsNull(this.tableTerra.TPTerraColumn);
             }
@@ -1016,6 +1046,18 @@ namespace FarmManager.Relatorios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTPTerraNull() {
                 this[this.tableTerra.TPTerraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNRMaximoVacasNull() {
+                return this.IsNull(this.tableTerra.NRMaximoVacasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNRMaximoVacasNull() {
+                this[this.tableTerra.NRMaximoVacasColumn] = global::System.Convert.DBNull;
             }
         }
         
