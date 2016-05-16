@@ -10,6 +10,7 @@ namespace FarmManager.Models
     {
         [Key]
         public int CDTerra { get; set; }
+        [Display(Name = "Número de Hectares")]
         public int NRHectares { get; set; }
     }
 }

@@ -4,30 +4,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Lista de Vacas</h2>
+<h2>Lista de Gado</h2>
 
 <p>
-    @Html.ActionLink("Cadastrar uma nova vaca", "Create")
+    @Html.ActionLink("Cadastrar um novo Gado", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            Brinco
+            @Html.DisplayNameFor(model => model.NRBrinco)
         </th>
         <th>
-            Data Nascimento
+            @Html.DisplayNameFor(model => model.DTNascimento)
         </th>
         <th>
-            Sexo
+            @Html.DisplayNameFor(model => model.TPSexo)
         </th>
         <th>
-            Data Desamamentação
+            @Html.DisplayNameFor(model => model.DTDesamamentacao)
         </th>
         <th>
-            Data da Última Inseminação
+            @Html.DisplayNameFor(model => model.DTInseminacao)
         </th>
         <th>
-            Data da Última Procriação
+            @Html.DisplayNameFor(model => model.DTProcriacao)
         </th>
         <th></th>
     </tr>

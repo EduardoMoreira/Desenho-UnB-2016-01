@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Detalhes</h2>
+<h2>Detalhes do Gado</h2>
 
 <div>
     <h4>Vaca @Html.DisplayFor(model => model.NRBrinco)</h4>
 	<hr />
     <dl class="dl-horizontal">
         <dt>
-            Data de nascimento
+            @Html.DisplayFor(model => model.DTNascimento)
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            Sexo
+            @Html.DisplayFor(model => model.TPSexo)
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            Data de inseminação
+            @Html.DisplayFor(model => model.DTInseminacao)
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            Data de desamamentação
+            @Html.DisplayFor(model => model.DTDesamamentacao)
         </dt>
 
         <dd>
@@ -43,7 +43,7 @@
         </dd>
 
         <dt>
-            Data de procriação
+            @Html.DisplayFor(model => model.DTProcriacao)
         </dt>
 
         <dd>
@@ -54,5 +54,5 @@
 </div>
 <p>
     @Html.ActionLink("Editar", "Edit", new { id = Model.NRBrinco }) |
-    @Html.ActionLink("Voltar a lista de vacas", "Index")
+    @Html.ActionLink("Voltar a lista de gado", "Index")
 </p>
