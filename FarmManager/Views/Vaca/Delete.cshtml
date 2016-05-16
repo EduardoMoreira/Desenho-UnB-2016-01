@@ -1,18 +1,18 @@
 ﻿@model FarmManager.Models.Vaca
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Deletar";
 }
 
 <h2>Excluir</h2>
 
-<h3>Tem certeza que deseja excluir essa vaca?</h3>
+<h3>Tem certeza que deseja excluir esse vaca?</h3>
 <div>
-    <h4>Vaca</h4>
+    <h4>Gado</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            Data de nascimento
+            @Html.DisplayNameFor(model => model.DTNascimento)
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            Sexo
+            @Html.DisplayNameFor(model => model.TPSexo)
         </dt>
 
         <dd>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            Data de inseminação
+            @Html.DisplayNameFor(model => model.DTInseminacao)
         </dt>
 
         <dd>
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            Data desamamentação
+            @Html.DisplayNameFor(model => model.DTDesamamentacao)
         </dt>
 
         <dd>
@@ -44,7 +44,7 @@
         </dd>
 
         <dt>
-            Data de procriação
+            @Html.DisplayNameFor(model => model.DTProcriacao)
         </dt>
 
         <dd>
@@ -58,7 +58,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar a lista de vacas", "Index")
+            @Html.ActionLink("Voltar a lista de gado", "Index")
         </div>
     }
 </div>
