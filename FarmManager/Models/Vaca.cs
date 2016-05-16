@@ -6,11 +6,11 @@ namespace FarmManager.Models
 {
     public enum Sexo
     {
-        M, F
+        Masculino, Feminino
     }
     public class Vaca
     {
-        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int NRBrinco { get; set; }
         public DateTime DTNascimento { get; set; }
         public Sexo TPSexo { get; set; }

@@ -37,8 +37,8 @@
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.TPSexo, new SelectList(
                   new List<Object>{
-                       new { value = "F" , text = "Feminino" },
-                       new { value = "M" , text = "Masculino"}
+                       new { value = "Feminino" , text = "Feminino" },
+                       new { value = "Masculino" , text = "Masculino"}
                                   }
                                     ,"value", "text", 2))
                 @Html.ValidationMessageFor(model => model.TPSexo)
