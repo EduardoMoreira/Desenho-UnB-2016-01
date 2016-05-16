@@ -12,6 +12,7 @@ namespace FarmManager.Models
         public int CDEquipamentoRural { get; set; }
         public decimal VLCompra { get; set; }
         public String DEEquipamentoRural { get; set; }
+
         public bool STAlugado { get; set; }
         public DateTime DTCompra { get; set; }
     }
