@@ -185,6 +185,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EquipamentoRuralController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
     <Compile Include="Models\EquipamentoRural.cs" />
+    <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -324,6 +326,11 @@
     <Content Include="Views\EquipamentoRural\Details.cshtml" />
     <Content Include="Views\EquipamentoRural\Edit.cshtml" />
     <Content Include="Views\EquipamentoRural\Index.cshtml" />
+    <Content Include="Views\Funcionario\Create.cshtml" />
+    <Content Include="Views\Funcionario\Delete.cshtml" />
+    <Content Include="Views\Funcionario\Details.cshtml" />
+    <Content Include="Views\Funcionario\Edit.cshtml" />
+    <Content Include="Views\Funcionario\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

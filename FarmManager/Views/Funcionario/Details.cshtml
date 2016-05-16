@@ -1,0 +1,50 @@
+﻿@model FarmManager.Models.Funcionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOFuncionario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOFuncionario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VLSalario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VLSalario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTContratacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTContratacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTNascimento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CDFuncionario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
