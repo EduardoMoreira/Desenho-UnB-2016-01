@@ -33,5 +33,12 @@ namespace FarmManager.Models
         [DataType(DataType.DateTime)]
         [Display(Name = "Data de Procriação")]
         public DateTime? DTProcriacao { get; set; }
+
+        public DateTime DTPrevistaInseminacao(DateTime DTDesamamentacao)
+        {
+            DateTime DTPrevistaInseminacao = 
+                DTDesamamentacao.AddDays(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["DiasEntreDesamamentacaoInseminacao"]));
+            return DTPrevistaInseminacao;
+        }
     }
 }
