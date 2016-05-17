@@ -137,6 +137,18 @@ namespace FarmManager.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: /Vaca/PlanoCiclo
+        public ActionResult PlanoCiclo()
+        {
+            var listaVacas = db.Vacas.ToList();
+
+            listaVacas = listaVacas.Where(vaca => vaca.DTDesamamentacao != null &&
+                                                  vaca.DTDesamamentacao != DateTime.MinValue &&
+                                                  vaca.DTPrevisaoInseminacao.Month == DateTime.Now.Month).ToList();
+
+            return View(listaVacas);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

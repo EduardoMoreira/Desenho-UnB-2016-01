@@ -1,26 +1,34 @@
-﻿@model FarmManager.Models.Vaca
+﻿@model IEnumerable<FarmManager.Models.Vaca>
 
 @{
     ViewBag.Title = "PlanoCiclo";
 }
 
-<h2>Plano do Ciclo</h2>
+<h2>Plano de Ciclo</h2>
 
-<div>
-    <h4>Gado</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            Data Prevista Inseminação
-        </dt>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NRBrinco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTPrevisaoInseminacao)
+        </th>
+        <th></th>
+    </tr>
 
-        <dd>
-            @Html.Display(Model.DTPrevistaInseminacao(Convert.ToDateTime(Model.DTDesamamentacao)).ToString("dd/MM/yyyy"))
-        </dd>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRBrinco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+        </td>
+        <td>
+            @Html.ActionLink("Detalhes", "Details", new { id=item.NRBrinco })
+        </td>
+    </tr>
+}
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.NRBrinco }) |
-    @Html.ActionLink("Voltar para lista de Gado", "Index")
-</p>
+</table>
