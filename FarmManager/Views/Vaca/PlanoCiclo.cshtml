@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FarmManager.Models.Vaca>
+﻿@model IList<IList<FarmManager.Models.Vaca>>
 
 @{
     ViewBag.Title = "PlanoCiclo";
@@ -17,7 +17,7 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model[0]) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.NRBrinco)

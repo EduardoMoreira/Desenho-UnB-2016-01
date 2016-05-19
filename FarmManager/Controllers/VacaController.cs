@@ -140,13 +140,21 @@ namespace FarmManager.Controllers
         // GET: /Vaca/PlanoCiclo
         public ActionResult PlanoCiclo()
         {
-            var listaVacas = db.Vacas.ToList();
+            List <List<Vaca>> listaVacas = new List<List<Vaca>>();
 
-            listaVacas = listaVacas.Where(vaca => vaca.DTDesamamentacao != null &&
-                                                  vaca.DTDesamamentacao != DateTime.MinValue &&
-                                                  vaca.DTPrevisaoInseminacao.Month == DateTime.Now.Month).ToList();
+            var listaVacasInseminacao = db.Vacas.ToList();
+
+            listaVacasInseminacao = listaVacasInseminacao.
+                Where(vaca => vaca.DTDesamamentacao != null &&
+                              vaca.DTDesamamentacao != DateTime.MinValue &&
+                              vaca.DTPrevisaoInseminacao.Day >= DateTime.Now.Day &&
+                              vaca.DTPrevisaoInseminacao.Day < DateTime.Now.AddDays(7).Day).ToList();
+
+            listaVacas.Add(listaVacasInseminacao);
 
             return View(listaVacas);
+
+
         }
 
         protected override void Dispose(bool disposing)
