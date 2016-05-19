@@ -4,9 +4,9 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Escluir</h2>
+<h2>Deletar</h2>
 
-<h3>Tem certeza que deseja escluir essa terra de plantio?</h3>
+<h3>Tem certeza que deseja remover esta terra de plantio?</h3>
 <div>
     <h4>Terra de Plantio</h4>
     <hr />
@@ -49,7 +49,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
             @Html.ActionLink("Voltar a lista de terras de plantio", "Index")
         </div>
     }

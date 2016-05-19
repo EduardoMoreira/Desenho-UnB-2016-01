@@ -4,14 +4,14 @@
     ViewBag.Title = "Editar";
 }
 
-<h2>Editar</h2>
+<h2>Editar Gado</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Vaca</h4>
+        <h4>Nº Brinco: @Html.DisplayFor(model => model.NRBrinco)</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.NRBrinco)
@@ -63,7 +63,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Salvar" class="btn btn-default" />
             </div>
         </div>
     </div>
