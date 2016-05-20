@@ -30,5 +30,9 @@ namespace FarmManager.DAL
         public System.Data.Entity.DbSet<FarmManager.Models.EquipamentoRural> EquipamentosRurais { get; set; }
 
         public System.Data.Entity.DbSet<FarmManager.Models.Funcionario> Funcionarios { get; set; }
+
+        public System.Data.Entity.DbSet<FarmManager.Models.Milho> Milhos { get; set; }
+
+        public System.Data.Entity.DbSet<FarmManager.Models.Soja> Sojas { get; set; }
     }
 }

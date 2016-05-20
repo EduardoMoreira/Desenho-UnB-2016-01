@@ -187,9 +187,11 @@
     <Compile Include="Controllers\EquipamentoRuralController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MilhoController.cs" />
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
     <Compile Include="Controllers\RelatorioInventarioController.cs" />
+    <Compile Include="Controllers\SojaController.cs" />
     <Compile Include="Controllers\TerraNuaController.cs" />
     <Compile Include="Controllers\TerraPlantioController.cs" />
     <Compile Include="Controllers\VacaController.cs" />
@@ -197,6 +199,8 @@
     <Compile Include="DAL\FarmSeed.cs" />
     <Compile Include="Models\EquipamentoRural.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Milho.cs" />
+    <Compile Include="Models\Soja.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -331,6 +335,16 @@
     <Content Include="Views\Funcionario\Details.cshtml" />
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
+    <Content Include="Views\Milho\Create.cshtml" />
+    <Content Include="Views\Milho\Delete.cshtml" />
+    <Content Include="Views\Milho\Details.cshtml" />
+    <Content Include="Views\Milho\Edit.cshtml" />
+    <Content Include="Views\Milho\Index.cshtml" />
+    <Content Include="Views\Soja\Create.cshtml" />
+    <Content Include="Views\Soja\Delete.cshtml" />
+    <Content Include="Views\Soja\Details.cshtml" />
+    <Content Include="Views\Soja\Edit.cshtml" />
+    <Content Include="Views\Soja\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
