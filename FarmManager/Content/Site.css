@@ -195,3 +195,64 @@ input[type="checkbox"].input-validation-error {
 .left-caret:after
 {	border-right: 5px solid #006666;
 }
+
+.btn-custom-darken.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-custom-darken {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #001f1f;
+  background-image: -moz-linear-gradient(top, #003333, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#003333), to(#000000));
+  background-image: -webkit-linear-gradient(top, #003333, #000000);
+  background-image: -o-linear-gradient(top, #003333, #000000);
+  background-image: linear-gradient(to bottom, #003333, #000000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff003333', endColorstr='#ff000000', GradientType=0);
+  border-color: #000000 #000000 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #000000;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  width: 100%;
+  height: 100px;
+}
+.btn-custom-darken:hover,
+.btn-custom-darken:focus,
+.btn-custom-darken:active,
+.btn-custom-darken.active,
+.btn-custom-darken.disabled,
+.btn-custom-darken[disabled] {
+  color: #ffffff;
+  background-color: #000000;
+  *background-color: #000000;
+}
+.btn-custom-darken:active,
+.btn-custom-darken.active {
+  background-color: #000000 ;
+}
+
+.btn-custom-darken span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-custom-darken span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-custom-darken:hover span {
+  padding-right: 25px;
+}
+
+.btn-custom-darken:hover span:after {
+  opacity: 1;
+  right: 0;
+}
