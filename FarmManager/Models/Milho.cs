@@ -6,16 +6,7 @@ using System.Web;
 
 namespace FarmManager.Models
 {
-    public class Milho
+    public class Milho : Grao
     {
-        [Key]
-        public int CDMilho { get; set; }
-
-        [Display(Name = "Quantidade")]
-        public int NRQuantidade { get; set; }
-
-        [DataType(DataType.DateTime)]
-        [Display(Name = "Data de Atualização")]
-        public DateTime DTAtualizacao { get; set; }
     }
 }

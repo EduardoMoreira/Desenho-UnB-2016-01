@@ -199,7 +199,10 @@
     <Compile Include="DAL\FarmSeed.cs" />
     <Compile Include="Models\EquipamentoRural.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Grao.cs" />
+    <Compile Include="Models\IMovimentacaoGrao.cs" />
     <Compile Include="Models\Milho.cs" />
+    <Compile Include="Models\MovimentacaoGrao.cs" />
     <Compile Include="Models\Soja.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
       <AutoGen>True</AutoGen>
