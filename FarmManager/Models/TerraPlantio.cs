@@ -6,11 +6,6 @@ using System.Web;
 
 namespace FarmManager.Models
 {
-    public enum Grao
-    {
-        Milho, Soja
-    }
-
     public class TerraPlantio : Terra
     {
         [Display(Name = "Data de Plantio")]
