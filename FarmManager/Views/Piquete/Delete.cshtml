@@ -4,9 +4,9 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Excluir</h2>
+<h2>Deletar</h2>
 
-<h3>Tem certeza que deseja excluir esse piquete?</h3>
+<h3>Tem certeza que deseja remover este piquete?</h3>
 <div>
     <h4>Piquete</h4>
     <hr />
@@ -41,7 +41,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
             @Html.ActionLink("Voltar a lista de piquetes", "Index")
         </div>
     }

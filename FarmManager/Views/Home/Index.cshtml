@@ -2,19 +2,89 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Farm Manager</h1>
-</div>
+<!--<img id="logo_index" src="@Url.Content("~/Images/background_home.png")" class="img-responsive">-->
 
-<div class="row">
-    <img id="logo_index" src="@Url.Content("~/Images/Logo.png")" class="img-responsive">
-</div>
-
-<div class="row">
+<span class="row">
     <div class="col-md-6">
         <h2>Bem-Vindo ao Farm Manager</h2>
         <p>
             Farm Manager irá te ajudar a gerenciar sua fazenda.
         </p>
     </div>
-</div>
+</span>
+
+<br>
+
+<span>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+        <a href="@Url.Action("Index", "Vaca")" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                </div>
+            </div>
+            <img src="~/Images/vaca_home.png" class="img-responsive" alt="">
+        </a>
+        <div class="portfolio-caption">
+            <h4>Gado</h4>
+            <p class="text-muted">Veja uma lista do gado cadastrado até o momento</p>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+        <a href="@Url.Action("Index", "Grao")" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                </div>
+            </div>
+            <img src="~/Images/grao_home.png" class="img-responsive" alt="">
+        </a>
+        <div class="portfolio-caption">
+            <h4>Grãos</h4>
+            <p class="text-muted">Graphic Design</p>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 portfolio-item">
+        <a href="@Url.Action("Index", "EquipamentoRural")" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                </div>
+            </div>
+            <img src="~/Images/equiprural_home.png" class="img-responsive" alt="">
+        </a>
+        <div class="portfolio-caption">
+            <h4>Equipamento Rural</h4>
+            <p class="text-muted">Graphic Design</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-6 portfolio-item">
+        <a href="@Url.Action("Index", "Terra")" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                </div>
+            </div>
+            <img src="~/Images/terra_home.png" class="img-responsive" alt="">
+        </a>
+        <div class="portfolio-caption">
+            <h4>Terra</h4>
+            <p class="text-muted">Graphic Design</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 portfolio-item">
+        <a href="@Url.Action("Index", "Funcionario")" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                </div>
+            </div>
+            <img src="~/Images/funcionario_home.png" class="img-responsive" alt="">
+        </a>
+        <div class="portfolio-caption">
+            <h4>Funcionários</h4>
+            <p class="text-muted">Graphic Design</p>
+        </div>
+    </div>
+</span>

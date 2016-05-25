@@ -13,9 +13,9 @@ namespace FarmManager.DAL
         {
             var vacas = new List<Vaca>
             {
-                new Vaca{NRBrinco = 1, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-09-01")},
-                new Vaca{NRBrinco = 2, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-10-01")},
-                new Vaca{NRBrinco = 3, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2006-02-01")},
+                new Vaca{NRBrinco = 1, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-09-01"), DTDesamamentacao = DateTime.Parse("2016-05-01")},
+                new Vaca{NRBrinco = 2, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-10-01"), DTDesamamentacao = DateTime.Parse("2016-04-10")},
+                new Vaca{NRBrinco = 3, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2006-02-01"), DTDesamamentacao = DateTime.Parse("2016-04-15")},
                 new Vaca{NRBrinco = 4, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2007-03-01")},
                 new Vaca{NRBrinco = 5, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2008-03-01")},
                 new Vaca{NRBrinco = 6, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2009-03-01")},

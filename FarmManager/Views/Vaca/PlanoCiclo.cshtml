@@ -1,0 +1,34 @@
+﻿@model IEnumerable<FarmManager.Models.Vaca>
+
+@{
+    ViewBag.Title = "PlanoCiclo";
+}
+
+<h2>Plano de Ciclo</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NRBrinco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTPrevisaoInseminacao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRBrinco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+        </td>
+        <td>
+            @Html.ActionLink("Detalhes", "Details", new { id=item.NRBrinco })
+        </td>
+    </tr>
+}
+
+</table>
