@@ -58,7 +58,4 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
-  <ItemGroup>
-    <Build Include="Vaca.sql" />
-  </ItemGroup>
 </Project>

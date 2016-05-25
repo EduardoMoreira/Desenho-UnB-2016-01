@@ -1,0 +1,51 @@
+﻿@model IEnumerable<FarmManager.Models.TerraPlantio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de terras de plantio</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar uma nova terra de plantio", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Data de plantio
+        </th>
+        <th>
+            Data de colheita
+        </th>
+        <th>
+            Tipo de grão
+        </th>
+        <th>
+            Número de hectares
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTPlantio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTColheita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TPGrao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRHectares)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CDTerra }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CDTerra }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.CDTerra })
+        </td>
+    </tr>
+}
+
+</table>

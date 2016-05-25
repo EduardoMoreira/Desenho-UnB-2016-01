@@ -1,0 +1,42 @@
+﻿@model FarmManager.Models.Pasto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Pasto</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Vacas presentes
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRVacasAlocadas)
+        </dd>
+
+        <dt>
+            Capacidade máxima
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRMaximoVacas)
+        </dd>
+
+        <dt>
+            Número de hectares
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRHectares)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CDTerra }) |
+    @Html.ActionLink("Voltar a lista de pastos", "Index")
+</p>

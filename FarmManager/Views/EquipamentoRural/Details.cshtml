@@ -1,0 +1,50 @@
+﻿@model FarmManager.Models.EquipamentoRural
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EquipamentoRural</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VLCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VLCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEEquipamentoRural)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEEquipamentoRural)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STAlugado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STAlugado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTCompra)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CDEquipamentoRural }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

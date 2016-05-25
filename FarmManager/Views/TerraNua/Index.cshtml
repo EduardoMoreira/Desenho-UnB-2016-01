@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FarmManager.Models.TerraNua>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de terras nuas</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar nova terra nua", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Descrição da terra
+        </th>
+        <th>
+            Número de hectares
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DETerra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRHectares)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CDTerra }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CDTerra }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.CDTerra })
+        </td>
+    </tr>
+}
+
+</table>

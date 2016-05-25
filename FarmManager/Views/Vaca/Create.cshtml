@@ -1,10 +1,10 @@
 ﻿@model FarmManager.Models.Vaca
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Cadastrar";
 }
 
-<h2>Cadastrar</h2>
+<h2>Cadastrar um novo gado</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,12 +12,12 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Boi</h4>
+        <h4>Vaca</h4>
         <hr />
         @Html.ValidationSummary(true)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NRBrinco, "Número Brinco", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.NRBrinco, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NRBrinco)
                 @Html.ValidationMessageFor(model => model.NRBrinco)
@@ -25,47 +25,23 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DTNascimento, "Data Nascimento", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DTNascimento, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DTNascimento)
+                @Html.TextBoxFor(model => model.DTNascimento, "{0:MM/dd/yyyy}")
                 @Html.ValidationMessageFor(model => model.DTNascimento)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TPSexo, "Sexo", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.TPSexo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.TPSexo, new SelectList(
                   new List<Object>{
-                       new { value = "F" , text = "Feminino" },
-                       new { value = "M" , text = "Masculino"}
+                       new { value = "Feminino" , text = "Feminino" },
+                       new { value = "Masculino" , text = "Masculino"}
                                   }
                                     ,"value", "text", 2))
                 @Html.ValidationMessageFor(model => model.TPSexo)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DTDesamamentacao, "Data Desamamentação", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DTDesamamentacao)
-                @Html.ValidationMessageFor(model => model.DTDesamamentacao)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DTInseminacao, "Data Última Inseminação", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DTInseminacao)
-                @Html.ValidationMessageFor(model => model.DTInseminacao)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DTProcriacao, "Data Última Procriação", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DTProcriacao)
-                @Html.ValidationMessageFor(model => model.DTProcriacao)
             </div>
         </div>
 
@@ -78,7 +54,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar a lista de vacas", "Index")
 </div>
 
 @section Scripts {

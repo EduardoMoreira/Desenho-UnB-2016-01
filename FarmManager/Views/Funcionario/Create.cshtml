@@ -1,0 +1,59 @@
+﻿@model FarmManager.Models.Funcionario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Funcionario</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.NOFuncionario, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NOFuncionario)
+                @Html.ValidationMessageFor(model => model.NOFuncionario)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VLSalario, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VLSalario)
+                @Html.ValidationMessageFor(model => model.VLSalario)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DTContratacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DTContratacao)
+                @Html.ValidationMessageFor(model => model.DTContratacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DTNascimento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DTNascimento)
+                @Html.ValidationMessageFor(model => model.DTNascimento)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

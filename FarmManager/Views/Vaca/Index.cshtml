@@ -4,30 +4,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Lista Gado</h2>
+<h2>Lista de Gado</h2>
 
 <p>
-    @Html.ActionLink("Cadastrar Novo Boi", "Create")
+    @Html.ActionLink("Cadastrar um novo Gado", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            Brinco
+            @Html.DisplayNameFor(model => model.NRBrinco)
         </th>
         <th>
-            Data Nascimento
+            @Html.DisplayNameFor(model => model.DTNascimento)
         </th>
         <th>
-            Sexo
+            @Html.DisplayNameFor(model => model.TPSexo)
         </th>
         <th>
-            Data Desamamentação
+            @Html.DisplayNameFor(model => model.DTDesamamentacao)
         </th>
         <th>
-            Data Última Inseminação
+            @Html.DisplayNameFor(model => model.DTInseminacao)
         </th>
         <th>
-            Data Última Procriação
+            @Html.DisplayNameFor(model => model.DTProcriacao)
         </th>
         <th></th>
     </tr>
@@ -55,7 +55,7 @@
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.NRBrinco }) |
             @Html.ActionLink("Detalhes", "Details", new { id=item.NRBrinco }) |
-            @Html.ActionLink("Deletar", "Delete", new { id=item.NRBrinco })
+            @Html.ActionLink("Excluir", "Delete", new { id=item.NRBrinco })
         </td>
     </tr>
 }

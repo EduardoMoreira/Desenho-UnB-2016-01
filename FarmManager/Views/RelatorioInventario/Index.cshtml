@@ -1,0 +1,12 @@
+﻿@using ReportViewerForMvc;
+
+@{
+    ViewBag.Title = "Relatório de Inventário";
+}
+
+<h2>Relatório de Inventário</h2>
+
+<br/>
+<br/>
+
+@Html.ReportViewer(ViewBag.ReportViewer as Microsoft.Reporting.WebForms.ReportViewer);

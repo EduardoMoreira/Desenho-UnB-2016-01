@@ -7,18 +7,19 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FarmManager.Models;
+using FarmManager.DAL;
 using System.Data.Entity.Validation;
 
 namespace FarmManager.Controllers
 {
     public class VacaController : Controller
     {
-        private Entities db = new Entities();
+        private FarmContext db = new FarmContext();
 
         // GET: /Vaca/
         public ActionResult Index()
         {
-            return View(db.Vaca.ToList());
+            return View(db.Vacas.ToList());
         }
 
         // GET: /Vaca/Details/5
@@ -28,7 +29,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaca vaca = db.Vaca.Find(id);
+            Vaca vaca = db.Vacas.Find(id);
             if (vaca == null)
             {
                 return HttpNotFound();
@@ -53,7 +54,7 @@ namespace FarmManager.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Vaca.Add(vaca);
+                    db.Vacas.Add(vaca);
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
@@ -71,6 +72,10 @@ namespace FarmManager.Controllers
                     }
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Erro ao criar vaca: " + e.Message);
+            }
 
             return View(vaca);
         }
@@ -82,7 +87,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaca vaca = db.Vaca.Find(id);
+            Vaca vaca = db.Vacas.Find(id);
             if (vaca == null)
             {
                 return HttpNotFound();
@@ -113,7 +118,7 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaca vaca = db.Vaca.Find(id);
+            Vaca vaca = db.Vacas.Find(id);
             if (vaca == null)
             {
                 return HttpNotFound();
@@ -126,8 +131,8 @@ namespace FarmManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Vaca vaca = db.Vaca.Find(id);
-            db.Vaca.Remove(vaca);
+            Vaca vaca = db.Vacas.Find(id);
+            db.Vacas.Remove(vaca);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

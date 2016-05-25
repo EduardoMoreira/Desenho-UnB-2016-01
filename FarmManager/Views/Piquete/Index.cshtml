@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FarmManager.Models.Piquete>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Piquetes</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Vacas presentes
+        </th>
+        <th>
+            Capacidade máxima
+        </th>
+        <th>
+            Número de hectares
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRVacasAlocadas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRMaximoVacas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRHectares)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CDTerra }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CDTerra }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.CDTerra })
+        </td>
+    </tr>
+}
+
+</table>
