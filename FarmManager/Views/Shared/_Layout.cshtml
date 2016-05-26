@@ -23,8 +23,7 @@
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
                             <li>@Html.ActionLink("Equipamento Rural", "Index", "EquipamentoRural")</li>
-                            <li>@Html.ActionLink("Milho", "Index", "Milho")</li>
-                            <li>@Html.ActionLink("Soja", "Index", "Soja")</li>
+                            <li>@Html.ActionLink("Grãos", "Index", "MovimentacaoGrao")</li>
                             <li>
                                 <a class="trigger right-caret">Terra</a>
                                 <ul class="dropdown-menu sub-menu">
@@ -41,14 +40,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("Relatório Inventário", "Index", "RelatorioInventario")</li>
+                    <li>@Html.ActionLink("Relatório de Inventário", "Index", "RelatorioInventario")</li>
+                    <li>@Html.ActionLink("Plano de Ciclo", "PlanoCiclo", "Vaca")</li>
                     <li>@Html.ActionLink("Funcionário", "Index", "Funcionario")</li>
                     }
                     else
                     {
                         <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
                     }
-                    <li>@Html.ActionLink("Plano de Ciclo", "PlanoCiclo", "Vaca")</li>
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")

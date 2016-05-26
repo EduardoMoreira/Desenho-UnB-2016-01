@@ -33,6 +33,32 @@ namespace FarmManager.DAL
             equipamentos.ForEach(s => context.EquipamentosRurais.Add(s));
             context.SaveChanges();
 
+            var milhos = context.Milhos.ToList();
+            if (milhos.Count == 0)
+            {
+                var milho = new Milho
+                {
+                    CDGrao = 1,
+                    NRQuantidade = 0,
+                    DTAtualizacao = DateTime.Now
+                };
+
+                context.Milhos.Add(milho);
+            }
+
+            var sojas = context.Sojas.ToList();
+            if (sojas.Count == 0)
+            {
+                var soja = new Soja
+                {
+                    CDGrao = 1,
+                    NRQuantidade = 0,
+                    DTAtualizacao = DateTime.Now
+                };
+
+                context.Sojas.Add(soja);
+            }
+
         }
     }
 }

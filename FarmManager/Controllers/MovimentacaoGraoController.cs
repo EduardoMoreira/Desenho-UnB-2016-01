@@ -11,107 +11,114 @@ using FarmManager.Models;
 
 namespace FarmManager.Controllers
 {
-    public class SojaController : Controller
+    public class MovimentacaoGraoController : Controller
     {
         private FarmContext db = new FarmContext();
 
-        // GET: Soja
+        // GET: MovimentacaoGrao
         public ActionResult Index()
         {
-            return View(db.Sojas.ToList());
+            return View(db.MovimentacaoGraos.ToList());
         }
 
-        // GET: Soja/Details/5
+        // GET: MovimentacaoGrao/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Soja soja = db.Sojas.Find(id);
-            if (soja == null)
+            MovimentacaoGrao movimentacaoGrao = db.MovimentacaoGraos.Find(id);
+            if (movimentacaoGrao == null)
             {
                 return HttpNotFound();
             }
-            return View(soja);
+            return View(movimentacaoGrao);
         }
 
-        // GET: Soja/Create
+        // GET: MovimentacaoGrao/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Soja/Create
+        // POST: MovimentacaoGrao/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CDSoja,NRQuantidade,DTAtualizacao")] Soja soja)
+        public ActionResult Create([Bind(Include = "CDMovimentacaoGrao,DEMovimentacaoGrao")] MovimentacaoGrao movimentacaoGrao)
         {
             if (ModelState.IsValid)
             {
-                db.Sojas.Add(soja);
+                Grao grao;
+                if (movimentacaoGrao.TPGrao == TipoGrao.Soja)
+                    grao = new Soja();
+                else
+                    grao = new Milho();
+                movimentacaoGrao.attach(grao);
+                db.MovimentacaoGraos.Add(movimentacaoGrao);
+                movimentacaoGrao.notify(movimentacaoGrao.NRQuantidade);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(soja);
+            return View(movimentacaoGrao);
         }
 
-        // GET: Soja/Edit/5
+        // GET: MovimentacaoGrao/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Soja soja = db.Sojas.Find(id);
-            if (soja == null)
+            MovimentacaoGrao movimentacaoGrao = db.MovimentacaoGraos.Find(id);
+            if (movimentacaoGrao == null)
             {
                 return HttpNotFound();
             }
-            return View(soja);
+            return View(movimentacaoGrao);
         }
 
-        // POST: Soja/Edit/5
+        // POST: MovimentacaoGrao/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CDSoja,NRQuantidade,DTAtualizacao")] Soja soja)
+        public ActionResult Edit([Bind(Include = "CDMovimentacaoGrao,DEMovimentacaoGrao")] MovimentacaoGrao movimentacaoGrao)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(soja).State = EntityState.Modified;
+                db.Entry(movimentacaoGrao).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(soja);
+            return View(movimentacaoGrao);
         }
 
-        // GET: Soja/Delete/5
+        // GET: MovimentacaoGrao/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Soja soja = db.Sojas.Find(id);
-            if (soja == null)
+            MovimentacaoGrao movimentacaoGrao = db.MovimentacaoGraos.Find(id);
+            if (movimentacaoGrao == null)
             {
                 return HttpNotFound();
             }
-            return View(soja);
+            return View(movimentacaoGrao);
         }
 
-        // POST: Soja/Delete/5
+        // POST: MovimentacaoGrao/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Soja soja = db.Sojas.Find(id);
-            db.Sojas.Remove(soja);
+            MovimentacaoGrao movimentacaoGrao = db.MovimentacaoGraos.Find(id);
+            db.MovimentacaoGraos.Remove(movimentacaoGrao);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

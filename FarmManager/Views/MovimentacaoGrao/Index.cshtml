@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FarmManager.Models.MovimentacaoGrao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DEMovimentacaoGrao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEMovimentacaoGrao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CDMovimentacaoGrao }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CDMovimentacaoGrao }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CDMovimentacaoGrao })
+        </td>
+    </tr>
+}
+
+</table>

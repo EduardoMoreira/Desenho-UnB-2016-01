@@ -1,0 +1,26 @@
+﻿@model FarmManager.Models.MovimentacaoGrao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MovimentacaoGrao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DEMovimentacaoGrao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEMovimentacaoGrao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CDMovimentacaoGrao }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

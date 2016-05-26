@@ -187,11 +187,10 @@
     <Compile Include="Controllers\EquipamentoRuralController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MilhoController.cs" />
+    <Compile Include="Controllers\MovimentacaoGraoController.cs" />
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
     <Compile Include="Controllers\RelatorioInventarioController.cs" />
-    <Compile Include="Controllers\SojaController.cs" />
     <Compile Include="Controllers\TerraNuaController.cs" />
     <Compile Include="Controllers\TerraPlantioController.cs" />
     <Compile Include="Controllers\VacaController.cs" />
@@ -353,6 +352,11 @@
     <Content Include="Views\Soja\Details.cshtml" />
     <Content Include="Views\Soja\Edit.cshtml" />
     <Content Include="Views\Soja\Index.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Create.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Delete.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Details.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Edit.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
