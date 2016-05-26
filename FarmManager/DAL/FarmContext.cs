@@ -32,5 +32,7 @@ namespace FarmManager.DAL
         public DbSet<EquipamentoRural> EquipamentosRurais { get; set; }
 
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Soja> Sojas { get; set; }
+        public DbSet<Milho> Milhos { get; set; }
     }
 }

@@ -244,12 +244,17 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\background_home.png" />
+    <Content Include="Images\equiprural_home.png" />
+    <Content Include="Images\funcionario_home.png" />
+    <Content Include="Images\grao_home.png" />
     <Content Include="Images\Logo.png" />
-    <Content Include="ReportViewerWebForm.aspx" />
+    <Content Include="Images\terra_home.png" />
+    <Content Include="Images\vaca_home.png" />
+    <Content Include="Images\vaca_home.png.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Relatorios\DSInventario.xsc">
@@ -370,6 +375,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\vaca_home.png.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
