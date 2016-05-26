@@ -9,33 +9,47 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-custom navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 @Html.ActionLink("Farm Manager", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
-                    <li>@Html.ActionLink("Equipamento Rural", "Index", "EquipamentoRural")</li>
+                    @if (Request.IsAuthenticated)
+                    {
                     <li class="dropdown">
-                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Terras<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>@Html.ActionLink("Pasto", "Index", "Pasto")</li>
-                            <li>@Html.ActionLink("Piquete", "Index", "Piquete")</li>
-                            <li>@Html.ActionLink("Terra Plantio", "Index", "TerraPlantio")</li>
-                            <li>@Html.ActionLink("Terra Nua", "Index", "TerraNua")</li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventário <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
+                            <li>@Html.ActionLink("Equipamento Rural", "Index", "EquipamentoRural")</li>
+                            <li>@Html.ActionLink("Milho", "Index", "Milho")</li>
+                            <li>@Html.ActionLink("Soja", "Index", "Soja")</li>
+                            <li>
+                                <a class="trigger right-caret">Terra</a>
+                                <ul class="dropdown-menu sub-menu">
+                                    <li>
+                                        <a class="trigger right-caret">Terra de Criação</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li>@Html.ActionLink("Pasto", "Index", "Pasto")</li>
+                                            <li>@Html.ActionLink("Piquete", "Index", "Piquete")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Terra de Plantio", "Index", "TerraPlantio")</li>
+                                    <li>@Html.ActionLink("Terra Nua", "Index", "TerraNua")</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li>@Html.ActionLink("Relatório Inventário", "Index", "RelatorioInventario")</li>
                     <li>@Html.ActionLink("Funcionário", "Index", "Funcionario")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
+                    }
                     <li>@Html.ActionLink("Plano de Ciclo", "PlanoCiclo", "Vaca")</li>
+                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -44,10 +58,10 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Farm Manager</p>
-        </footer>
     </div>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Farm Manager</p>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

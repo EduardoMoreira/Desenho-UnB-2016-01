@@ -12,23 +12,27 @@ namespace FarmManager.DAL
         {
         }
 
-        public DbSet<Vaca> Vacas { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.TerraPlantio> TerrasPlantios { get; set; }
+        public DbSet<RegisterViewModel> Usuarios { get; set; }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.Piquete> Piquetes { get; set; }
+        public DbSet<Vaca> Vacas { get; set; }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.Pasto> Pastos { get; set; }
+        public DbSet<TerraPlantio> TerrasPlantios { get; set; }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.TerraNua> TerrasNuas { get; set; }
+        public DbSet<Piquete> Piquetes { get; set; }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.EquipamentoRural> EquipamentosRurais { get; set; }
+        public DbSet<Pasto> Pastos { get; set; }
 
-        public System.Data.Entity.DbSet<FarmManager.Models.Funcionario> Funcionarios { get; set; }
+        public DbSet<TerraNua> TerrasNuas { get; set; }
+
+        public DbSet<EquipamentoRural> EquipamentosRurais { get; set; }
+
+        public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Soja> Sojas { get; set; }
+        public DbSet<Milho> Milhos { get; set; }
     }
 }

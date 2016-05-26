@@ -187,9 +187,11 @@
     <Compile Include="Controllers\EquipamentoRuralController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MilhoController.cs" />
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
     <Compile Include="Controllers\RelatorioInventarioController.cs" />
+    <Compile Include="Controllers\SojaController.cs" />
     <Compile Include="Controllers\TerraNuaController.cs" />
     <Compile Include="Controllers\TerraPlantioController.cs" />
     <Compile Include="Controllers\VacaController.cs" />
@@ -197,6 +199,11 @@
     <Compile Include="DAL\FarmSeed.cs" />
     <Compile Include="Models\EquipamentoRural.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\Grao.cs" />
+    <Compile Include="Models\IMovimentacaoGrao.cs" />
+    <Compile Include="Models\Milho.cs" />
+    <Compile Include="Models\MovimentacaoGrao.cs" />
+    <Compile Include="Models\Soja.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -237,12 +244,17 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\background_home.png" />
+    <Content Include="Images\equiprural_home.png" />
+    <Content Include="Images\funcionario_home.png" />
+    <Content Include="Images\grao_home.png" />
     <Content Include="Images\Logo.png" />
-    <Content Include="ReportViewerWebForm.aspx" />
+    <Content Include="Images\terra_home.png" />
+    <Content Include="Images\vaca_home.png" />
+    <Content Include="Images\vaca_home.png.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Relatorios\DSInventario.xsc">
@@ -331,7 +343,16 @@
     <Content Include="Views\Funcionario\Details.cshtml" />
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
-    <Content Include="Views\Vaca\PlanoCiclo.cshtml" />
+    <Content Include="Views\Milho\Create.cshtml" />
+    <Content Include="Views\Milho\Delete.cshtml" />
+    <Content Include="Views\Milho\Details.cshtml" />
+    <Content Include="Views\Milho\Edit.cshtml" />
+    <Content Include="Views\Milho\Index.cshtml" />
+    <Content Include="Views\Soja\Create.cshtml" />
+    <Content Include="Views\Soja\Delete.cshtml" />
+    <Content Include="Views\Soja\Details.cshtml" />
+    <Content Include="Views\Soja\Edit.cshtml" />
+    <Content Include="Views\Soja\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -354,6 +375,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\vaca_home.png.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
