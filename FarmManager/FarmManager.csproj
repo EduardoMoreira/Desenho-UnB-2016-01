@@ -253,7 +253,9 @@
     <Content Include="Images\Logo.png" />
     <Content Include="Images\terra_home.png" />
     <Content Include="Images\vaca_home.png" />
-    <Content Include="Images\vaca_home.png.ico" />
+    <Content Include="Images\vaca_home.png.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Relatorios\DSInventario.xsc">
