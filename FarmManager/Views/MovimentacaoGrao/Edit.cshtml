@@ -1,20 +1,29 @@
 ﻿@model FarmManager.Models.MovimentacaoGrao
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
 }
 
 <h2>Editar</h2>
+
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Movimentacao de Grão</h4>
+        <h4>Movimentao Grao</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.CDMovimentacaoGrao)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TPGrao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TPGrao)
+                @Html.ValidationMessageFor(model => model.TPGrao)
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.DEMovimentacaoGrao, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -25,13 +34,25 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.NRQuantidade, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NRQuantidade)
+                @Html.ValidationMessageFor(model => model.NRQuantidade)
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Salvar" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Voltar a lista de grãos", "Index")
+    @Html.ActionLink("Voltar para a lista", "Index")
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

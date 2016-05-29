@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarmManager.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,9 +20,9 @@ namespace FarmManager.Models
         [Display(Name = "Data de Atualização")]
         public DateTime? DTAtualizacao { get; set; }
 
-        public void update(int quantidade)
+        public virtual void update(int quantidade)
         {
-            this.NRQuantidade += quantidade;
+            throw new Exception("Função não implementada");
         }
     }
 }

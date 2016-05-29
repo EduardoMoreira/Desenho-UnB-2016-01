@@ -344,16 +344,6 @@
     <Content Include="Views\Funcionario\Details.cshtml" />
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
-    <Content Include="Views\Milho\Create.cshtml" />
-    <Content Include="Views\Milho\Delete.cshtml" />
-    <Content Include="Views\Milho\Details.cshtml" />
-    <Content Include="Views\Milho\Edit.cshtml" />
-    <Content Include="Views\Milho\Index.cshtml" />
-    <Content Include="Views\Soja\Create.cshtml" />
-    <Content Include="Views\Soja\Delete.cshtml" />
-    <Content Include="Views\Soja\Details.cshtml" />
-    <Content Include="Views\Soja\Edit.cshtml" />
-    <Content Include="Views\Soja\Index.cshtml" />
     <Content Include="Views\MovimentacaoGrao\Create.cshtml" />
     <Content Include="Views\MovimentacaoGrao\Delete.cshtml" />
     <Content Include="Views\MovimentacaoGrao\Details.cshtml" />

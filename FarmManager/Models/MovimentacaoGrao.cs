@@ -9,7 +9,7 @@ namespace FarmManager.Models
 {
     public enum TipoGrao
     {
-        Soja, Milho
+        Milho, Soja
     }
 
     public class MovimentacaoGrao : IMovimentacaoGrao
@@ -27,7 +27,7 @@ namespace FarmManager.Models
         public int NRQuantidade { get; set; }
 
         [NotMapped]
-        private List<Grao> listaGraos;
+        private List<Grao> listaGraos = new List<Grao>();
 
         public void attach(Grao grao)
         {

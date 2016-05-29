@@ -47,7 +47,7 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CDMovimentacaoGrao,DEMovimentacaoGrao")] MovimentacaoGrao movimentacaoGrao)
+        public ActionResult Create([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,NRQuantidade")] MovimentacaoGrao movimentacaoGrao)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CDMovimentacaoGrao,DEMovimentacaoGrao")] MovimentacaoGrao movimentacaoGrao)
+        public ActionResult Edit([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,NRQuantidade")] MovimentacaoGrao movimentacaoGrao)
         {
             if (ModelState.IsValid)
             {

@@ -1,16 +1,24 @@
 ﻿@model FarmManager.Models.MovimentacaoGrao
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Excluir";
 }
 
-<h2>Deletar</h2>
+<h2>Excluir</h2>
 
-<h3>Tem certeza que deseja remover esta movimentação?</h3>
+<h3>Deseja realmente excluir?</h3>
 <div>
-    <h4>Movimentacao de Grãos</h4>
+    <h4>Movimentação de Grão</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TPGrao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPGrao)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.DEMovimentacaoGrao)
         </dt>
@@ -19,14 +27,22 @@
             @Html.DisplayFor(model => model.DEMovimentacaoGrao)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.NRQuantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRQuantidade)
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Deletar" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar a lista de grãos", "Index")
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para a Lista", "Index")
         </div>
     }
 </div>
