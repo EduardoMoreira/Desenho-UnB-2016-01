@@ -8,96 +8,107 @@
     <div class="col-md-6">
         <h2>Bem-Vindo ao Farm Manager</h2>
         <p>
-            Farm Manager irá te ajudar a gerenciar sua fazenda.
+            Farm Manager te ajuda a gerenciar sua fazenda.
         </p>
     </div>
 </span>
 
 <br>
 
-@if (Request.IsAuthenticated == false)
+@if (Request.IsAuthenticated)
 {
-    <span class="row">
-        <div class="col-md-10">
-            <h2>Para ter acesso completo ao sistema realize seu @Html.ActionLink("login", "Login", "Account").</h2>
+    <span>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="@Url.Action("Index", "Vaca")" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="~/Images/vaca_home.png" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>Gado</h4>
+                <p class="text-muted">Gerencie o seu pasto</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="@Url.Action("Index", "MovimentacaoGrao")" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="~/Images/grao_home.png" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>Grãos</h4>
+                <p class="text-muted">Gerencie a quantidade de milho e soja disponível</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="@Url.Action("Index", "EquipamentoRural")" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="~/Images/equiprural_home.png" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>Equipamento Rural</h4>
+                <p class="text-muted">Controle os equipamentos da sua Fazenda</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 portfolio-item">
+            <a href="@Url.Action("Index", "Terra")" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="~/Images/terra_home.png" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>Terra</h4>
+                <p class="text-muted">Gerencie as terras de plantio e criação</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 portfolio-item">
+            <a href="@Url.Action("Index", "Funcionario")" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="~/Images/funcionario_home.png" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>Funcionários</h4>
+                <p class="text-muted">Gerencie os seus funcionários</p>
+            </div>
         </div>
     </span>
 }
 
-@if (Request.IsAuthenticated)
+else
 {
-<span>
-    <div class="col-md-4 col-sm-6 portfolio-item">
-        <a href="@Url.Action("Index", "Vaca")" class="portfolio-link" data-toggle="modal">
-            <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
+    <span class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="@Url.Action("Index", "Vaca")" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
                 </div>
+                <img src="~/Images/vaca_home.png" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>Gado</h4>
+                <p class="text-muted">Gerencie o seu pasto</p>
             </div>
-            <img src="~/Images/vaca_home.png" class="img-responsive" alt="">
-        </a>
-        <div class="portfolio-caption">
-            <h4>Gado</h4>
-            <p class="text-muted">Gerencie o seu pasto</p>
         </div>
-    </div>
-    <div class="col-md-4 col-sm-6 portfolio-item">
-        <a href="@Url.Action("Index", "MovimentacaoGrao")" class="portfolio-link" data-toggle="modal">
-            <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                </div>
-            </div>
-            <img src="~/Images/grao_home.png" class="img-responsive" alt="">
-        </a>
-        <div class="portfolio-caption">
-            <h4>Grãos</h4>
-            <p class="text-muted">Gerencie a quantidade de milho e soja disponível</p>
-        </div>
-    </div>
-
-    <div class="col-md-4 col-sm-6 portfolio-item">
-        <a href="@Url.Action("Index", "EquipamentoRural")" class="portfolio-link" data-toggle="modal">
-            <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                </div>
-            </div>
-            <img src="~/Images/equiprural_home.png" class="img-responsive" alt="">
-        </a>
-        <div class="portfolio-caption">
-            <h4>Equipamento Rural</h4>
-            <p class="text-muted">Controle os equipamentos da sua Fazenda</p>
-        </div>
-    </div>
-
-    <div class="col-md-6 col-sm-6 portfolio-item">
-        <a href="@Url.Action("Index", "Terra")" class="portfolio-link" data-toggle="modal">
-            <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                </div>
-            </div>
-            <img src="~/Images/terra_home.png" class="img-responsive" alt="">
-        </a>
-        <div class="portfolio-caption">
-            <h4>Terra</h4>
-            <p class="text-muted">Gerencie as terras de plantio e criação</p>
-        </div>
-    </div>
-    <div class="col-md-6 col-sm-6 portfolio-item">
-        <a href="@Url.Action("Index", "Funcionario")" class="portfolio-link" data-toggle="modal">
-            <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                </div>
-            </div>
-            <img src="~/Images/funcionario_home.png" class="img-responsive" alt="">
-        </a>
-        <div class="portfolio-caption">
-            <h4>Funcionários</h4>
-            <p class="text-muted">Gerencie os seus funcionários</p>
-        </div>
-    </div>
-</span>
+    </span>
 }
