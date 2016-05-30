@@ -17,11 +17,10 @@ namespace FarmManager.Models
         public int NRBrinco { get; set; }
 
         [Required(ErrorMessage = "Digite a data de nascimento da vaca!")]
-        [DataType(DataType.DateTime)]
         [Display(Name = "Data de Nascimento")]
+        [DataType(DataType.Date)]
         public DateTime DTNascimento { get; set; }
 
-        [Required(ErrorMessage = "Digite o sexo da vaca!")]
         [Display(Name = "Sexo")]
         public Sexo TPSexo { get; set; }
         

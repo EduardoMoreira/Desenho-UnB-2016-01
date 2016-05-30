@@ -11,6 +11,7 @@ namespace FarmManager.Models
     {
         [Display(Name = "Vacas presentes")]
         public int NRVacasAlocadas { get; set; }
+
         [Display(Name = "Capacidade máxima")]
         public int NRMaximoVacas { get; set; }
     }
