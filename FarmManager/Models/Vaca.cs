@@ -11,17 +11,20 @@ namespace FarmManager.Models
     public class Vaca
     {
         [Key]
+        [Required(ErrorMessage = "Digite o número do brinco da vaca!")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Número do Brinco")]
         public int NRBrinco { get; set; }
 
+        [Required(ErrorMessage = "Digite a data de nascimento da vaca!")]
         [DataType(DataType.DateTime)]
         [Display(Name = "Data de Nascimento")]
         public DateTime DTNascimento { get; set; }
 
+        [Required(ErrorMessage = "Digite o sexo da vaca!")]
         [Display(Name = "Sexo")]
         public Sexo TPSexo { get; set; }
-
+        
         [DataType(DataType.DateTime)]
         [Display(Name = "Data de Inseminação")]
         public DateTime? DTInseminacao { get; set; }

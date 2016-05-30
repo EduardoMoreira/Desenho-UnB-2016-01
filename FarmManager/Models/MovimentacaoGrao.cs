@@ -7,16 +7,27 @@ using System.Web;
 
 namespace FarmManager.Models
 {
+    public enum TipoGrao
+    {
+        Milho, Soja
+    }
+
     public class MovimentacaoGrao : IMovimentacaoGrao
     {
         [Key]
         public int CDMovimentacaoGrao { get; set; }
-        
+
+        [Display(Name = "Tipo de Grão")]
+        public TipoGrao TPGrao { get; set; }
+
+        [Display(Name = "Descrição")]
+        public string DEMovimentacaoGrao { get; set; }
+
         [Display(Name = "Quantidade (kg)")]
-        private int NRQuantidade { get; set; }
+        public int NRQuantidade { get; set; }
 
         [NotMapped]
-        private List<Grao> listaGraos;
+        private List<Grao> listaGraos = new List<Grao>();
 
         public void attach(Grao grao)
         {

@@ -187,6 +187,7 @@
     <Compile Include="Controllers\EquipamentoRuralController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MovimentacaoGraoController.cs" />
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
     <Compile Include="Controllers\RelatorioInventarioController.cs" />
@@ -197,7 +198,12 @@
     <Compile Include="DAL\FarmSeed.cs" />
     <Compile Include="Models\EquipamentoRural.cs" />
     <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="Models\PlanoCiclo.cs" />
+    <Compile Include="Models\Grao.cs" />
+    <Compile Include="Models\IMovimentacaoGrao.cs" />
+    <Compile Include="Models\Milho.cs" />
+    <Compile Include="Models\MovimentacaoGrao.cs" />
+    <Compile Include="Models\Soja.cs" />
+	<Compile Include="Models\PlanoCiclo.cs" />
     <Compile Include="Models\PlanoCicloMensal.cs" />
     <Compile Include="Models\PlanoCicloSemanal.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
@@ -240,11 +246,19 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\background_home.png" />
+    <Content Include="Images\equiprural_home.png" />
+    <Content Include="Images\funcionario_home.png" />
+    <Content Include="Images\grao_home.png" />
     <Content Include="Images\Logo.png" />
+    <Content Include="Images\terra_home.png" />
+    <Content Include="Images\vaca_home.png" />
+    <Content Include="Images\vaca_home.png.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="ReportViewerWebForm.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -334,6 +348,11 @@
     <Content Include="Views\Funcionario\Details.cshtml" />
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Create.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Delete.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Details.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Edit.cshtml" />
+    <Content Include="Views\MovimentacaoGrao\Index.cshtml" />
     <Content Include="Views\Vaca\PlanoCicloMensal.cshtml" />
     <Content Include="Views\Vaca\PlanoCicloSemanal.cshtml" />
   </ItemGroup>

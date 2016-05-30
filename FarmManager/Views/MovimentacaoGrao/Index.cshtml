@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FarmManager.Models.MovimentacaoGrao>
+
+@{
+    ViewBag.Title = "Lista de Movimentação de Grãos";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar Movimentação de Grão", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TPGrao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEMovimentacaoGrao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NRQuantidade)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TPGrao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEMovimentacaoGrao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRQuantidade)
+        </td>
+    </tr>
+}
+
+</table>

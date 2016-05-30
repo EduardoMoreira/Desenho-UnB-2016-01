@@ -21,20 +21,31 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
-                    <li>@Html.ActionLink("Equipamento Rural", "Index", "EquipamentoRural")</li>
+                    @if (Request.IsAuthenticated)
+                    {
                     <li class="dropdown">
-                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Terras<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>@Html.ActionLink("Pasto", "Index", "Pasto")</li>
-                            <li>@Html.ActionLink("Piquete", "Index", "Piquete")</li>
-                            <li>@Html.ActionLink("Terra Plantio", "Index", "TerraPlantio")</li>
-                            <li>@Html.ActionLink("Terra Nua", "Index", "TerraNua")</li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventário <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
+                            <li>@Html.ActionLink("Equipamento Rural", "Index", "EquipamentoRural")</li>
+                            <li>@Html.ActionLink("Grãos", "Index", "MovimentacaoGrao")</li>
+                            <li>
+                                <a class="trigger right-caret">Terra</a>
+                                <ul class="dropdown-menu sub-menu">
+                                    <li>
+                                        <a class="trigger right-caret">Terra de Criação</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li>@Html.ActionLink("Pasto", "Index", "Pasto")</li>
+                                            <li>@Html.ActionLink("Piquete", "Index", "Piquete")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Terra de Plantio", "Index", "TerraPlantio")</li>
+                                    <li>@Html.ActionLink("Terra Nua", "Index", "TerraNua")</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("Relatório Inventário", "Index", "RelatorioInventario")</li>
-                    <li>@Html.ActionLink("Funcionário", "Index", "Funcionario")</li>
+                    <li>@Html.ActionLink("Relatório de Inventário", "Index", "RelatorioInventario")</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Planos de Ciclo<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -42,6 +53,13 @@
                             <li>@Html.ActionLink("Plano de Ciclo Mensal", "PlanoCicloMensal", "Vaca")</li>
                         </ul>
                     </li>
+                    <li>@Html.ActionLink("Funcionário", "Index", "Funcionario")</li>
+                    }
+                    else
+                    {
+                    <li>@Html.ActionLink("Gado", "Index", "Vaca")</li>
+                    }
+                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

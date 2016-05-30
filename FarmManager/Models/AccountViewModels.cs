@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FarmManager.Models
 {
@@ -45,6 +46,8 @@ namespace FarmManager.Models
 
     public class RegisterViewModel
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         [Display(Name = "Login")]
         public string UserName { get; set; }

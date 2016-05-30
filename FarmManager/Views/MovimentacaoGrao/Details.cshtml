@@ -1,0 +1,42 @@
+﻿@model FarmManager.Models.MovimentacaoGrao
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Movimentação de Grão</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TPGrao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPGrao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEMovimentacaoGrao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEMovimentacaoGrao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NRQuantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRQuantidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CDMovimentacaoGrao }) |
+    @Html.ActionLink("Voltar para a Lista", "Index")
+</p>
