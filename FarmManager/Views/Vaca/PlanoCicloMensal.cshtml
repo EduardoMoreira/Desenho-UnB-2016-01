@@ -39,6 +39,10 @@
     </table>
 }
 
+else
+{
+    <p>Não há vaca para ser inseminada</p>
+}
 
 @if (Model[1].Count > 0)
 {
@@ -71,6 +75,11 @@
         }
 
     </table>
+}
+
+else
+{
+    <p>Não há vaca para trazer para procriação</p>
 }
 
 @if (Model[2].Count > 0)
@@ -106,6 +115,11 @@
     </table>
 }
 
+else
+{
+    <p>Não há vaca para procriar</p>
+}
+
 @if (Model[3].Count > 0)
 {
     <h3>Desamamentar</h3>
@@ -137,4 +151,9 @@
         }
 
     </table>
+}
+
+else
+{
+    <p>Não há vaca para desamamentar</p>
 }
