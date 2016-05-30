@@ -15,6 +15,17 @@
 
 <br>
 
+@if (Request.IsAuthenticated == false)
+{
+    <span class="row">
+        <div class="col-md-10">
+            <h2>Para ter acesso completo ao sistema realize seu @Html.ActionLink("login", "Login", "Account").</h2>
+        </div>
+    </span>
+}
+
+@if (Request.IsAuthenticated)
+{
 <span>
     <div class="col-md-4 col-sm-6 portfolio-item">
         <a href="@Url.Action("Index", "Vaca")" class="portfolio-link" data-toggle="modal">
@@ -89,3 +100,4 @@
         </div>
     </div>
 </span>
+}

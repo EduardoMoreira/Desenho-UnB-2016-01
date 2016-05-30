@@ -57,10 +57,11 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Farm Manager</p>
+        </footer>
     </div>
-    <footer>
-        <p>&copy; @DateTime.Now.Year - Farm Manager</p>
-    </footer>
+    
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
