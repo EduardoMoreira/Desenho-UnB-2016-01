@@ -349,9 +349,6 @@
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
     <Content Include="Views\MovimentacaoGrao\Create.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Delete.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Details.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Edit.cshtml" />
     <Content Include="Views\MovimentacaoGrao\Index.cshtml" />
     <Content Include="Views\Vaca\PlanoCicloMensal.cshtml" />
     <Content Include="Views\Vaca\PlanoCicloSemanal.cshtml" />

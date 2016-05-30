@@ -12,6 +12,11 @@ namespace FarmManager.Models
         Milho, Soja
     }
 
+    public enum TipoEntradaSaida
+    {
+        Entrada, Saida
+    }
+
     public class MovimentacaoGrao : IMovimentacaoGrao
     {
         [Key]
@@ -23,8 +28,14 @@ namespace FarmManager.Models
         [Display(Name = "Descrição")]
         public string DEMovimentacaoGrao { get; set; }
 
+        [Display(Name = "Entrada/Saída")]
+        public TipoEntradaSaida TPEntradaSaida { get; set; }
+
         [Display(Name = "Quantidade (kg)")]
         public int NRQuantidade { get; set; }
+
+        [Display(Name = "Data de Atualização")]
+        public DateTime DTAtualizacao { get; set; }
 
         [NotMapped]
         private List<Grao> listaGraos = new List<Grao>();
