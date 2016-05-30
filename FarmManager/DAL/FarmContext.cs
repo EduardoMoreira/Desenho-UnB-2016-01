@@ -36,7 +36,5 @@ namespace FarmManager.DAL
         public DbSet<Soja> Sojas { get; set; }
 
         public DbSet<Milho> Milhos { get; set; }
-
-        public System.Data.Entity.DbSet<FarmManager.Models.MovimentacaoGrao> MovimentacaoGraos { get; set; }
     }
 }
