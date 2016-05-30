@@ -12,9 +12,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DTAtualizacao)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.TPGrao)
         </th>
         <th>
@@ -26,14 +23,14 @@
         <th>
             @Html.DisplayNameFor(model => model.NRQuantidade)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTAtualizacao)
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DTAtualizacao)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TPGrao)
             </td>
@@ -45,6 +42,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NRQuantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DTAtualizacao)
             </td>
         </tr>
     }
