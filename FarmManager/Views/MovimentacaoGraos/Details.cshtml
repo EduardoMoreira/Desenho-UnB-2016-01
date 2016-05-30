@@ -1,12 +1,11 @@
 ﻿@model FarmManager.Models.MovimentacaoGrao
 
 @{
-    ViewBag.Title = "Excluir";
+    ViewBag.Title = "Detalhes";
 }
 
-<h2>Excluir</h2>
+<h2>Detalhes</h2>
 
-<h3>Tem certeza que deseja excluir essa movimentação?</h3>
 <div>
     <h4>Movimentação de Grão</h4>
     <hr />
@@ -17,6 +16,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.TPGrao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPEntradaSaida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPEntradaSaida)
         </dd>
 
         <dt>
@@ -36,13 +43,8 @@
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Excluir" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar para a Lista", "Index")
-        </div>
-    }
 </div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CDMovimentacaoGrao }) |
+    @Html.ActionLink("Voltar para a Lista", "Index")
+</p>

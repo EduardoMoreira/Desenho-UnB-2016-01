@@ -11,17 +11,17 @@ using FarmManager.Models;
 
 namespace FarmManager.Controllers
 {
-    public class MovimentacaoGraoController : Controller
+    public class MovimentacaoGraosController : Controller
     {
         private FarmContext db = new FarmContext();
 
-        // GET: MovimentacaoGrao
+        // GET: MovimentacaoGraos
         public ActionResult Index()
         {
             return View(db.MovimentacaoGraos.ToList());
         }
 
-        // GET: MovimentacaoGrao/Details/5
+        // GET: MovimentacaoGraos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,18 +36,18 @@ namespace FarmManager.Controllers
             return View(movimentacaoGrao);
         }
 
-        // GET: MovimentacaoGrao/Create
+        // GET: MovimentacaoGraos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: MovimentacaoGrao/Create
+        // POST: MovimentacaoGraos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,NRQuantidade")] MovimentacaoGrao movimentacaoGrao)
+        public ActionResult Create([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,TPEntradaSaida,NRQuantidade")] MovimentacaoGrao movimentacaoGrao)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +66,7 @@ namespace FarmManager.Controllers
             return View(movimentacaoGrao);
         }
 
-        // GET: MovimentacaoGrao/Edit/5
+        // GET: MovimentacaoGraos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -81,12 +81,12 @@ namespace FarmManager.Controllers
             return View(movimentacaoGrao);
         }
 
-        // POST: MovimentacaoGrao/Edit/5
+        // POST: MovimentacaoGraos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,NRQuantidade")] MovimentacaoGrao movimentacaoGrao)
+        public ActionResult Edit([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,TPEntradaSaida,NRQuantidade")] MovimentacaoGrao movimentacaoGrao)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace FarmManager.Controllers
             return View(movimentacaoGrao);
         }
 
-        // GET: MovimentacaoGrao/Delete/5
+        // GET: MovimentacaoGraos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,7 +112,7 @@ namespace FarmManager.Controllers
             return View(movimentacaoGrao);
         }
 
-        // POST: MovimentacaoGrao/Delete/5
+        // POST: MovimentacaoGraos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

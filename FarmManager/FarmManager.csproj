@@ -187,7 +187,7 @@
     <Compile Include="Controllers\EquipamentoRuralController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MovimentacaoGraoController.cs" />
+    <Compile Include="Controllers\MovimentacaoGraosController.cs" />
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
     <Compile Include="Controllers\RelatorioInventarioController.cs" />
@@ -344,11 +344,11 @@
     <Content Include="Views\Funcionario\Details.cshtml" />
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Create.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Delete.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Details.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Edit.cshtml" />
-    <Content Include="Views\MovimentacaoGrao\Index.cshtml" />
+    <Content Include="Views\MovimentacaoGraos\Create.cshtml" />
+    <Content Include="Views\MovimentacaoGraos\Delete.cshtml" />
+    <Content Include="Views\MovimentacaoGraos\Details.cshtml" />
+    <Content Include="Views\MovimentacaoGraos\Edit.cshtml" />
+    <Content Include="Views\MovimentacaoGraos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

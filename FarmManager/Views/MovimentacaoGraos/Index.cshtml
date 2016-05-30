@@ -18,6 +18,9 @@
             @Html.DisplayNameFor(model => model.DEMovimentacaoGrao)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.TPEntradaSaida)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NRQuantidade)
         </th>
     </tr>
@@ -32,10 +35,10 @@
                 @Html.DisplayFor(modelItem => item.DEMovimentacaoGrao)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NRQuantidade)
+                @Html.DisplayFor(modelItem => item.TPEntradaSaida)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.CDMovimentacaoGrao })
+                @Html.DisplayFor(modelItem => item.NRQuantidade)
             </td>
         </tr>
     }
