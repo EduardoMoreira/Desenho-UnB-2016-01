@@ -197,6 +197,9 @@
     <Compile Include="DAL\FarmSeed.cs" />
     <Compile Include="Models\EquipamentoRural.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\PlanoCiclo.cs" />
+    <Compile Include="Models\PlanoCicloMensal.cs" />
+    <Compile Include="Models\PlanoCicloSemanal.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -331,7 +334,8 @@
     <Content Include="Views\Funcionario\Details.cshtml" />
     <Content Include="Views\Funcionario\Edit.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
-    <Content Include="Views\Vaca\PlanoCiclo.cshtml" />
+    <Content Include="Views\Vaca\PlanoCicloMensal.cshtml" />
+    <Content Include="Views\Vaca\PlanoCicloSemanal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -137,10 +137,10 @@ namespace FarmManager.Controllers
             return RedirectToAction("Index");
         }
 
-        // GET: /Vaca/PlanoCiclo
-        public ActionResult PlanoCiclo()
+        // GET: /Vaca/PlanoCicloSemanal
+        public ActionResult PlanoCicloSemanal()
         {
-            List <List<Vaca>> listaVacas = new List<List<Vaca>>();
+            List<List<Vaca>> listaVacas = new List<List<Vaca>>();
 
             var listaVacasInseminacao = db.Vacas.ToList();
 
@@ -153,8 +153,26 @@ namespace FarmManager.Controllers
             listaVacas.Add(listaVacasInseminacao);
 
             return View(listaVacas);
+        }
 
+        // GET: /Vaca/PlanoCicloMensal
+        public ActionResult PlanoCicloMensal()
+        {
+            PlanoCiclo plano = new PlanoCicloMensal();
 
+            var listaVacas = plano.RetornaListaVacas();
+
+            var listaVacasInseminacao = db.Vacas.ToList();
+
+            listaVacasInseminacao = listaVacasInseminacao.
+                Where(vaca => vaca.DTDesamamentacao != null &&
+                              vaca.DTDesamamentacao != DateTime.MinValue &&
+                              vaca.DTPrevisaoInseminacao.Day >= DateTime.Now.Day &&
+                              vaca.DTPrevisaoInseminacao.Day < DateTime.Now.AddDays(7).Day).ToList();
+
+            listaVacas.Add(listaVacasInseminacao);
+
+            return View(listaVacas);
         }
 
         protected override void Dispose(bool disposing)

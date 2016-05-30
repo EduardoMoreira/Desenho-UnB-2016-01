@@ -1,0 +1,65 @@
+﻿@model IList<IList<FarmManager.Models.Vaca>>
+
+@{
+    ViewBag.Title = "PlanoCicloMensal";
+}
+
+<h2>Plano de Ciclo Mensal</h2>
+
+<h3>Inseminar</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[0][0].NRBrinco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0][0].DTPrevisaoInseminacao)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model[0])
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NRBrinco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+            </td>
+            <td>
+                @Html.ActionLink("Detalhes", "Details", new { id = item.NRBrinco })
+            </td>
+        </tr>
+    }
+
+    <h3>Desamamentar</h3>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].NRBrinco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].DTPrevisaoInseminacao)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model[1])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NRBrinco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.NRBrinco })
+                </td>
+            </tr>
+        }
+
+    </table>
