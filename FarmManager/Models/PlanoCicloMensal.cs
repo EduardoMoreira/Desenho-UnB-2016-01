@@ -10,26 +10,7 @@ namespace FarmManager.Models
     {
         FarmContext db = new FarmContext();
 
-        public override IList<IList<Vaca>> RetornaListaVacas()
-        {
-            IList<IList<Vaca>> listaVacas = new List<IList<Vaca>>();
-
-            var listaVacasInseminacao = VacasParaInseminar();
-            listaVacas.Add(listaVacasInseminacao);
-
-            var listaVacasTrazerParaProcriacao = VacasParaTrazerParaProcriar();
-            listaVacas.Add(listaVacasTrazerParaProcriacao);
-
-            var listaVacasProcriacao = VacasParaProcriar();
-            listaVacas.Add(listaVacasProcriacao);
-
-            var listaVacasDesamamentacao = VacasParaDesamamentar();
-            listaVacas.Add(listaVacasDesamamentacao);
-
-            return listaVacas;
-        }
-
-        private List<Vaca> VacasParaInseminar()
+        public override List<Vaca> VacasParaInseminar()
         {
             var listaVacasInseminacao = db.Vacas.ToList();
 
@@ -41,7 +22,7 @@ namespace FarmManager.Models
             return listaVacasInseminacao;
         }
 
-        private List<Vaca> VacasParaTrazerParaProcriar()
+        public override List<Vaca> VacasParaTrazerParaProcriar()
         {
             var listaVacasTrazerProcriar = db.Vacas.ToList();
 
@@ -53,7 +34,7 @@ namespace FarmManager.Models
             return listaVacasTrazerProcriar;
         }
 
-        private List<Vaca> VacasParaProcriar()
+        public override List<Vaca> VacasParaProcriar()
         {
             var listaVacasProcriar = db.Vacas.ToList();
 
@@ -65,7 +46,7 @@ namespace FarmManager.Models
             return listaVacasProcriar;
         }
 
-        private List<Vaca> VacasParaDesamamentar()
+        public override List<Vaca> VacasParaDesamamentar()
         {
             var listaVacasDesamamentar = db.Vacas.ToList();
 

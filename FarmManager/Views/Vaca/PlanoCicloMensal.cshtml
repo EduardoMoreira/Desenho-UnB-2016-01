@@ -1,34 +1,140 @@
 ﻿@model IList<IList<FarmManager.Models.Vaca>>
 
 @{
-    ViewBag.Title = "PlanoCiclo";
+    ViewBag.Title = "PlanoCicloMensal";
 }
 
-<h2>Plano de Ciclo</h2>
+<h2>Plano de Ciclo Mensal</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model[0][0].NRBrinco)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model[0][0].DTPrevisaoInseminacao)
-        </th>
-        <th></th>
-    </tr>
+@if (Model[0].Count > 0)
+{
+    <h3>Inseminar</h3>
 
-@foreach (var item in Model[0]) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NRBrinco)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
-        </td>
-        <td>
-            @Html.ActionLink("Detalhes", "Details", new { id=item.NRBrinco })
-        </td>
-    </tr>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].NRBrinco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].DTPrevisaoInseminacao)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model[0])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NRBrinco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.NRBrinco })
+                </td>
+            </tr>
+        }
+
+    </table>
 }
 
-</table>
+
+@if (Model[1].Count > 0)
+{
+    <h3>Trazer para procriação</h3>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].NRBrinco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].DTPrevisaoInseminacao)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model[1])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NRBrinco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.NRBrinco })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+@if (Model[2].Count > 0)
+{
+    <h3>Procriar</h3>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].NRBrinco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].DTPrevisaoInseminacao)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model[2])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NRBrinco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.NRBrinco })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+@if (Model[3].Count > 0)
+{
+    <h3>Desamamentar</h3>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].NRBrinco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0][0].DTPrevisaoInseminacao)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model[3])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NRBrinco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTPrevisaoInseminacao)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.NRBrinco })
+                </td>
+            </tr>
+        }
+
+    </table>
+}

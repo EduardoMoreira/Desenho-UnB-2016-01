@@ -20,7 +20,7 @@ namespace FarmManager.DAL
                 new Vaca{NRBrinco = 5, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2008-03-01")},
                 new Vaca{NRBrinco = 6, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2009-03-01")},
                 new Vaca{NRBrinco = 7, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2010-03-01")},
-                new Vaca{NRBrinco = 8, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2011-03-01")}
+                new Vaca{NRBrinco = 8, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2013-04-01")}
             };
 
             vacas.ForEach(s => context.Vacas.Add(s));

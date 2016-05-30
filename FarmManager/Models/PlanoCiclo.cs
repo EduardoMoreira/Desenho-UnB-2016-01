@@ -7,9 +7,31 @@ namespace FarmManager.Models
 {
     public abstract class PlanoCiclo
     {
-        public virtual IList<IList<Vaca>> RetornaListaVacas()
+        public IList<IList<Vaca>> RetornaListaVacas()
         {
-            throw new Exception("Função não implementada!");
+            IList<IList<Vaca>> listaVacas = new List<IList<Vaca>>();
+
+            var listaVacasInseminacao = VacasParaInseminar();
+            listaVacas.Add(listaVacasInseminacao);
+
+            var listaVacasTrazerParaProcriacao = VacasParaTrazerParaProcriar();
+            listaVacas.Add(listaVacasTrazerParaProcriacao);
+
+            var listaVacasProcriacao = VacasParaProcriar();
+            listaVacas.Add(listaVacasProcriacao);
+
+            var listaVacasDesamamentacao = VacasParaDesamamentar();
+            listaVacas.Add(listaVacasDesamamentacao);
+
+            return listaVacas;
         }
+
+        public abstract List<Vaca> VacasParaInseminar();
+
+        public abstract List<Vaca> VacasParaTrazerParaProcriar();
+
+        public abstract List<Vaca> VacasParaProcriar();
+
+        public abstract List<Vaca> VacasParaDesamamentar();
     }
 }
