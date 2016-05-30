@@ -7,7 +7,7 @@ namespace FarmManager.Models
 {
     public abstract class PlanoCiclo
     {
-        public virtual List<List<Vaca>> RetornaListaVacas()
+        public virtual IList<IList<Vaca>> RetornaListaVacas()
         {
             throw new Exception("Função não implementada!");
         }

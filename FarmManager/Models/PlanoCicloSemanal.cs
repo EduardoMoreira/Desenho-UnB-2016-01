@@ -10,9 +10,9 @@ namespace FarmManager.Models
     {
         FarmContext db = new FarmContext();
 
-        public override List<List<Vaca>> RetornaListaVacas()
+        public override IList<IList<Vaca>> RetornaListaVacas()
         {
-            List<List<Vaca>> listaVacas = new List<List<Vaca>>();
+            IList<IList<Vaca>> listaVacas = new List<IList<Vaca>>();
 
             var listaVacasInseminacao = VacasParaInseminar();
             listaVacas.Add(listaVacasInseminacao);

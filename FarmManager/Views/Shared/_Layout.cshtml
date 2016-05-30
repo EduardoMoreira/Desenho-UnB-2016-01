@@ -35,7 +35,13 @@
                     </li>
                     <li>@Html.ActionLink("Relatório Inventário", "Index", "RelatorioInventario")</li>
                     <li>@Html.ActionLink("Funcionário", "Index", "Funcionario")</li>
-                    <li>@Html.ActionLink("Plano de Ciclo", "PlanoCiclo", "Vaca")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Planos de Ciclo<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Plano de Ciclo Semanal", "PlanoCicloSemanal", "Vaca")</li>
+                            <li>@Html.ActionLink("Plano de Ciclo Mensal", "PlanoCicloMensal", "Vaca")</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
