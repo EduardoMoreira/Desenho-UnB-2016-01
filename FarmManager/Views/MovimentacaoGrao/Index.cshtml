@@ -22,18 +22,22 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TPGrao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DEMovimentacaoGrao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NRQuantidade)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TPGrao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEMovimentacaoGrao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NRQuantidade)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.CDMovimentacaoGrao })
+            </td>
+        </tr>
+    }
 
 </table>

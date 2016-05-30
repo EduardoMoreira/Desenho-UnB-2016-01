@@ -18,7 +18,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TPGrao, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TPGrao)
+                @Html.DropDownListFor(model => model.TPGrao, new SelectList(
+                  new List<Object>{
+                       new { value = "Milho" , text = "Milho" },
+                       new { value = "Soja" , text = "Soja"}
+                                  }
+                                    , "value", "text", 2))
                 @Html.ValidationMessageFor(model => model.TPGrao)
             </div>
         </div>
@@ -26,7 +31,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DEMovimentacaoGrao, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DEMovimentacaoGrao)
+                @Html.DropDownListFor(model => model.DEMovimentacaoGrao, new SelectList(
+                  new List<Object>{
+                       new { value = "Entrada" , text = "Entrada" },
+                       new { value = "Saída" , text = "Saída"}
+                                  }
+                                    , "value", "text", 2))
                 @Html.ValidationMessageFor(model => model.DEMovimentacaoGrao)
             </div>
         </div>
@@ -48,7 +58,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar para a Lista", "Index")
 </div>
 
 @section Scripts {
