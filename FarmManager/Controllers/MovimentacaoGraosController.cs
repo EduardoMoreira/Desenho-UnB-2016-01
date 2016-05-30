@@ -47,7 +47,7 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,TPEntradaSaida,NRQuantidade")] MovimentacaoGrao movimentacaoGrao)
+        public ActionResult Create([Bind(Include = "CDMovimentacaoGrao,TPGrao,DEMovimentacaoGrao,TPEntradaSaida,NRQuantidade,DTAtualizacao")] MovimentacaoGrao movimentacaoGrao)
         {
             if (ModelState.IsValid)
             {
@@ -59,6 +59,7 @@ namespace FarmManager.Controllers
                 movimentacaoGrao.attach(grao);
                 db.MovimentacaoGraos.Add(movimentacaoGrao);
                 movimentacaoGrao.notify(movimentacaoGrao.NRQuantidade);
+                movimentacaoGrao.DTAtualizacao = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

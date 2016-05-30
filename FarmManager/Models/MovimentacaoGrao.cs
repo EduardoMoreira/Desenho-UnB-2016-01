@@ -34,6 +34,9 @@ namespace FarmManager.Models
         [Display(Name = "Quantidade (kg)")]
         public int NRQuantidade { get; set; }
 
+        [Display(Name = "Data de Atualização")]
+        public DateTime DTAtualizacao { get; set; }
+
         [NotMapped]
         private List<Grao> listaGraos = new List<Grao>();
 
