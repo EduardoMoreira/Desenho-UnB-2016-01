@@ -197,11 +197,12 @@
     <Compile Include="Controllers\VacaController.cs" />
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
-    <Compile Include="Models\Terra\CriacaoPasto.cs" />
+    <Compile Include="Models\Terra\Criação\CriacaoPiquete.cs" />
+    <Compile Include="Models\Terra\Criação\CriacaoPasto.cs" />
     <Compile Include="Models\Equipamento Rural\EquipamentoRural.cs" />
     <Compile Include="Models\Funcionario\Funcionario.cs" />
     <Compile Include="Models\Grao\Grao.cs" />
-    <Compile Include="Models\Terra\CriacaoTerra.cs" />
+    <Compile Include="Models\Terra\Criação\CriacaoTerra.cs" />
     <Compile Include="Models\Grao\IMovimentacaoGrao.cs" />
     <Compile Include="Models\Grao\Milho.cs" />
     <Compile Include="Models\Grao\MovimentacaoGrao.cs" />

@@ -111,7 +111,7 @@ namespace FarmManager.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Pasto pasto = db.Pastos.Find(id);
-            criacaoPasto.criarTerra(pasto);
+            criacaoPasto.excluirTerra(pasto);
             return RedirectToAction("Index");
         }
 
