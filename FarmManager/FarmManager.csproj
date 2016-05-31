@@ -191,21 +191,25 @@
     <Compile Include="Controllers\PastoController.cs" />
     <Compile Include="Controllers\PiqueteController.cs" />
     <Compile Include="Controllers\RelatorioInventarioController.cs" />
+    <Compile Include="Controllers\TerraFazendaController.cs" />
     <Compile Include="Controllers\TerraNuaController.cs" />
     <Compile Include="Controllers\TerraPlantioController.cs" />
     <Compile Include="Controllers\VacaController.cs" />
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
-    <Compile Include="Models\EquipamentoRural.cs" />
-    <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="Models\Grao.cs" />
-    <Compile Include="Models\IMovimentacaoGrao.cs" />
-    <Compile Include="Models\Milho.cs" />
-    <Compile Include="Models\MovimentacaoGrao.cs" />
-    <Compile Include="Models\Soja.cs" />
-	<Compile Include="Models\PlanoCiclo.cs" />
-    <Compile Include="Models\PlanoCicloMensal.cs" />
-    <Compile Include="Models\PlanoCicloSemanal.cs" />
+    <Compile Include="Models\Terra\CriacaoPasto.cs" />
+    <Compile Include="Models\Equipamento Rural\EquipamentoRural.cs" />
+    <Compile Include="Models\Funcionario\Funcionario.cs" />
+    <Compile Include="Models\Grao\Grao.cs" />
+    <Compile Include="Models\Terra\CriacaoTerra.cs" />
+    <Compile Include="Models\Grao\IMovimentacaoGrao.cs" />
+    <Compile Include="Models\Grao\Milho.cs" />
+    <Compile Include="Models\Grao\MovimentacaoGrao.cs" />
+    <Compile Include="Models\Grao\Soja.cs" />
+    <Compile Include="Models\Vaca\PlanoCiclo.cs" />
+    <Compile Include="Models\Vaca\PlanoCicloMensal.cs" />
+    <Compile Include="Models\Vaca\PlanoCicloSemanal.cs" />
+    <Compile Include="Models\Terra\TerraFazenda.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -214,15 +218,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Pasto.cs" />
-    <Compile Include="Models\Piquete.cs" />
-    <Compile Include="Models\Terra.cs" />
-    <Compile Include="Models\TerraCriacao.cs" />
-    <Compile Include="Models\TerraNua.cs" />
-    <Compile Include="Models\TerraPlantio.cs" />
-    <Compile Include="Models\Vaca.cs" />
+    <Compile Include="Models\Identity\AccountViewModels.cs" />
+    <Compile Include="Models\Identity\IdentityModels.cs" />
+    <Compile Include="Models\Terra\Pasto.cs" />
+    <Compile Include="Models\Terra\Piquete.cs" />
+    <Compile Include="Models\Terra\Terra.cs" />
+    <Compile Include="Models\Terra\TerraCriacao.cs" />
+    <Compile Include="Models\Terra\TerraNua.cs" />
+    <Compile Include="Models\Terra\TerraPlantio.cs" />
+    <Compile Include="Models\Vaca\Vaca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Startup.cs" />
@@ -352,9 +356,12 @@
     <Content Include="Views\MovimentacaoGrao\Index.cshtml" />
     <Content Include="Views\Vaca\PlanoCicloMensal.cshtml" />
     <Content Include="Views\Vaca\PlanoCicloSemanal.cshtml" />
+    <Content Include="Views\TerraFazenda\Details.cshtml" />
+    <Content Include="Views\TerraFazenda\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Terra\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

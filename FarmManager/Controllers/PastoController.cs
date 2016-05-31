@@ -14,6 +14,7 @@ namespace FarmManager.Controllers
     public class PastoController : Controller
     {
         private FarmContext db = new FarmContext();
+        private CriacaoPasto criacaoPasto = new CriacaoPasto();
 
         // GET: /Pasto/
         public ActionResult Index()
@@ -51,8 +52,7 @@ namespace FarmManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Pastos.Add(pasto);
-                db.SaveChanges();
+                criacaoPasto.criarTerra(pasto);
                 return RedirectToAction("Index");
             }
 
@@ -111,8 +111,7 @@ namespace FarmManager.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Pasto pasto = db.Pastos.Find(id);
-            db.Pastos.Remove(pasto);
-            db.SaveChanges();
+            criacaoPasto.criarTerra(pasto);
             return RedirectToAction("Index");
         }
 

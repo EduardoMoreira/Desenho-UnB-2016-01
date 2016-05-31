@@ -59,6 +59,16 @@ namespace FarmManager.DAL
                 context.Sojas.Add(soja);
             }
 
+            var terrasFazenda = context.TerraFazenda.ToList();
+            if (terrasFazenda.Count == 0)
+            {
+                var terra = new TerraFazenda
+                {
+                    NRHectares = 0
+                };
+
+                context.TerraFazenda.Add(terra);
+            }
         }
     }
 }
