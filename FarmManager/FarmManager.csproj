@@ -197,6 +197,8 @@
     <Compile Include="Controllers\VacaController.cs" />
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
+    <Compile Include="Models\Terra\Criação\CriacaoTerraNua.cs" />
+    <Compile Include="Models\Terra\Criação\CriacaoTerraPlantio.cs" />
     <Compile Include="Models\Terra\Criação\CriacaoPiquete.cs" />
     <Compile Include="Models\Terra\Criação\CriacaoPasto.cs" />
     <Compile Include="Models\Equipamento Rural\EquipamentoRural.cs" />

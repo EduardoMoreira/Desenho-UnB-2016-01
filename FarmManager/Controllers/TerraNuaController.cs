@@ -14,6 +14,7 @@ namespace FarmManager.Controllers
     public class TerraNuaController : Controller
     {
         private FarmContext db = new FarmContext();
+        private CriacaoTerra criacaoTerraNua = new CriacaoTerraNua();
 
         // GET: /TerraNua/
         public ActionResult Index()
@@ -51,8 +52,7 @@ namespace FarmManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.TerrasNuas.Add(terranua);
-                db.SaveChanges();
+                criacaoTerraNua.criarTerra(terranua);
                 return RedirectToAction("Index");
             }
 
@@ -110,9 +110,8 @@ namespace FarmManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            TerraNua terranua = db.TerrasNuas.Find(id);
-            db.TerrasNuas.Remove(terranua);
-            db.SaveChanges();
+            TerraNua terraNua = db.TerrasNuas.Find(id);
+            criacaoTerraNua.excluirTerra(terraNua);
             return RedirectToAction("Index");
         }
 

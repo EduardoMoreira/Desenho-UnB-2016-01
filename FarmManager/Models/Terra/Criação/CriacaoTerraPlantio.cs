@@ -5,21 +5,21 @@ using System.Web;
 
 namespace FarmManager.Models
 {
-    public class CriacaoPiquete : CriacaoTerra
+    public class CriacaoTerraPlantio : CriacaoTerra
     {
         public override void criarTerra(Terra terra)
         {
-            Piquete piquete = (Piquete)terra;
-            db.Piquetes.Add(piquete);
+            TerraPlantio terrasPlantio = (TerraPlantio)terra;
+            db.TerrasPlantios.Add(terrasPlantio);
             db.SaveChanges();
             base.criarTerra(terra);
         }
 
         public override void excluirTerra(Terra terra)
         {
-            Piquete piquete = (Piquete)terra;
-            db.Piquetes.Attach(piquete);
-            db.Piquetes.Remove(piquete);
+            TerraPlantio terrasPlantio = (TerraPlantio)terra;
+            db.TerrasPlantios.Attach(terrasPlantio);
+            db.TerrasPlantios.Remove(terrasPlantio);
             db.SaveChanges();
             base.excluirTerra(terra);
         }
