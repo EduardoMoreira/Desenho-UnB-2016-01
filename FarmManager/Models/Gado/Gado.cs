@@ -36,6 +36,9 @@ namespace FarmManager.Models
         [Display(Name = "Data de Procriação")]
         public DateTime? DTProcriacao { get; set; }
 
+        [Display(Name = "O animal existe atualmente na propriedade?")]
+        public bool STAtivo { get; set; }
+
         public DateTime DTPrevisaoInseminacao
         {
             get

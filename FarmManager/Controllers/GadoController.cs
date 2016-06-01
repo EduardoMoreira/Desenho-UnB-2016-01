@@ -48,7 +48,7 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado gado)
+        public ActionResult Create([Bind(Include= "NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao,STAtivo")] Gado gado)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado gado)
+        public ActionResult Edit([Bind(Include= "NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao,STAtivo")] Gado gado)
         {
             if (ModelState.IsValid)
             {
