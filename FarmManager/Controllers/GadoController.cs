@@ -12,24 +12,24 @@ using System.Data.Entity.Validation;
 
 namespace FarmManager.Controllers
 {
-    public class VacaController : Controller
+    public class GadoController : Controller
     {
         private FarmContext db = new FarmContext();
 
-        // GET: /Vaca/
+        // GET: /Gado/
         public ActionResult Index()
         {
             return View(db.Vacas.ToList());
         }
 
-        // GET: /Vaca/Details/5
+        // GET: /Gado/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaca vaca = db.Vacas.Find(id);
+            Gado vaca = db.Vacas.Find(id);
             if (vaca == null)
             {
                 return HttpNotFound();
@@ -37,18 +37,18 @@ namespace FarmManager.Controllers
             return View(vaca);
         }
 
-        // GET: /Vaca/Create
+        // GET: /Gado/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: /Vaca/Create
+        // POST: /Gado/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Vaca vaca)
+        public ActionResult Create([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado vaca)
         {
             try
             {
@@ -80,14 +80,14 @@ namespace FarmManager.Controllers
             return View(vaca);
         }
 
-        // GET: /Vaca/Edit/5
+        // GET: /Gado/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaca vaca = db.Vacas.Find(id);
+            Gado vaca = db.Vacas.Find(id);
             if (vaca == null)
             {
                 return HttpNotFound();
@@ -95,12 +95,12 @@ namespace FarmManager.Controllers
             return View(vaca);
         }
 
-        // POST: /Vaca/Edit/5
+        // POST: /Gado/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Vaca vaca)
+        public ActionResult Edit([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado vaca)
         {
             if (ModelState.IsValid)
             {
@@ -111,14 +111,14 @@ namespace FarmManager.Controllers
             return View(vaca);
         }
 
-        // GET: /Vaca/Delete/5
+        // GET: /Gado/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaca vaca = db.Vacas.Find(id);
+            Gado vaca = db.Vacas.Find(id);
             if (vaca == null)
             {
                 return HttpNotFound();
@@ -126,30 +126,30 @@ namespace FarmManager.Controllers
             return View(vaca);
         }
 
-        // POST: /Vaca/Delete/5
+        // POST: /Gado/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Vaca vaca = db.Vacas.Find(id);
+            Gado vaca = db.Vacas.Find(id);
             db.Vacas.Remove(vaca);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        // GET: /Vaca/PlanoCicloSemanal
+        // GET: /Gado/PlanoCicloSemanal
         public ActionResult PlanoCicloSemanal()
         {
             PlanoCiclo plano = new PlanoCicloSemanal();
-            IList<IList<Vaca>> listaVacas = plano.RetornaListaVacas();
+            IList<IList<Gado>> listaVacas = plano.RetornaListaVacas();
             return View(listaVacas);
         }
 
-        // GET: /Vaca/PlanoCicloMensal
+        // GET: /Gado/PlanoCicloMensal
         public ActionResult PlanoCicloMensal()
         {
             PlanoCiclo plano = new PlanoCicloMensal();
-            IList<IList<Vaca>> listaVacas = plano.RetornaListaVacas();
+            IList<IList<Gado>> listaVacas = plano.RetornaListaVacas();
             return View(listaVacas);
         }
 

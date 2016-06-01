@@ -19,7 +19,7 @@ namespace FarmManager.DAL
 
         public DbSet<RegisterViewModel> Usuarios { get; set; }
 
-        public DbSet<Vaca> Vacas { get; set; }
+        public DbSet<Gado> Vacas { get; set; }
 
         public DbSet<TerraPlantio> TerrasPlantios { get; set; }
 

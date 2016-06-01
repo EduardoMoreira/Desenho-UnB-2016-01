@@ -186,7 +186,7 @@
     <Compile Include="Controllers\TerraFazendaController.cs" />
     <Compile Include="Controllers\TerraNuaController.cs" />
     <Compile Include="Controllers\TerraPlantioController.cs" />
-    <Compile Include="Controllers\VacaController.cs" />
+    <Compile Include="Controllers\GadoController.cs" />
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
     <Compile Include="Models\Terra\Criação\CriacaoTerraNua.cs" />
@@ -201,9 +201,9 @@
     <Compile Include="Models\Grao\Milho.cs" />
     <Compile Include="Models\Grao\MovimentacaoGrao.cs" />
     <Compile Include="Models\Grao\Soja.cs" />
-    <Compile Include="Models\Vaca\PlanoCiclo.cs" />
-    <Compile Include="Models\Vaca\PlanoCicloMensal.cs" />
-    <Compile Include="Models\Vaca\PlanoCicloSemanal.cs" />
+    <Compile Include="Models\Gado\PlanoCiclo.cs" />
+    <Compile Include="Models\Gado\PlanoCicloMensal.cs" />
+    <Compile Include="Models\Gado\PlanoCicloSemanal.cs" />
     <Compile Include="Models\Terra\TerraFazenda.cs" />
     <Compile Include="Relatorios\DSInventario.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -221,7 +221,7 @@
     <Compile Include="Models\Terra\TerraCriacao.cs" />
     <Compile Include="Models\Terra\TerraNua.cs" />
     <Compile Include="Models\Terra\TerraPlantio.cs" />
-    <Compile Include="Models\Vaca\Vaca.cs" />
+    <Compile Include="Models\Gado\Gado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Startup.cs" />
@@ -311,11 +311,11 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Vaca\Create.cshtml" />
-    <Content Include="Views\Vaca\Delete.cshtml" />
-    <Content Include="Views\Vaca\Details.cshtml" />
-    <Content Include="Views\Vaca\Edit.cshtml" />
-    <Content Include="Views\Vaca\Index.cshtml" />
+    <Content Include="Views\Gado\Create.cshtml" />
+    <Content Include="Views\Gado\Delete.cshtml" />
+    <Content Include="Views\Gado\Details.cshtml" />
+    <Content Include="Views\Gado\Edit.cshtml" />
+    <Content Include="Views\Gado\Index.cshtml" />
     <Content Include="Views\TerraPlantio\Create.cshtml" />
     <Content Include="Views\TerraPlantio\Delete.cshtml" />
     <Content Include="Views\TerraPlantio\Details.cshtml" />
@@ -349,8 +349,8 @@
     <Content Include="Views\Funcionario\Index.cshtml" />
     <Content Include="Views\MovimentacaoGrao\Create.cshtml" />
     <Content Include="Views\MovimentacaoGrao\Index.cshtml" />
-    <Content Include="Views\Vaca\PlanoCicloMensal.cshtml" />
-    <Content Include="Views\Vaca\PlanoCicloSemanal.cshtml" />
+    <Content Include="Views\Gado\PlanoCicloMensal.cshtml" />
+    <Content Include="Views\Gado\PlanoCicloSemanal.cshtml" />
     <Content Include="Views\TerraFazenda\Details.cshtml" />
     <Content Include="Views\TerraFazenda\Index.cshtml" />
   </ItemGroup>

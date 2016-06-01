@@ -8,15 +8,15 @@ namespace FarmManager.Models
     {
         Masculino, Feminino
     }
-    public class Vaca
+    public class Gado
     {
         [Key]
-        [Required(ErrorMessage = "Digite o número do brinco da vaca!")]
+        [Required(ErrorMessage = "Digite o número do brinco do animal!")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Número do Brinco")]
         public int NRBrinco { get; set; }
 
-        [Required(ErrorMessage = "Digite a data de nascimento da vaca!")]
+        [Required(ErrorMessage = "Digite a data de nascimento do animal!")]
         [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
         public DateTime DTNascimento { get; set; }

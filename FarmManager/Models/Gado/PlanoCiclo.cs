@@ -7,9 +7,9 @@ namespace FarmManager.Models
 {
     public abstract class PlanoCiclo
     {
-        public IList<IList<Vaca>> RetornaListaVacas()
+        public IList<IList<Gado>> RetornaListaVacas()
         {
-            IList<IList<Vaca>> listaVacas = new List<IList<Vaca>>();
+            IList<IList<Gado>> listaVacas = new List<IList<Gado>>();
 
             var listaVacasInseminacao = VacasParaInseminar();
             listaVacas.Add(listaVacasInseminacao);
@@ -26,12 +26,12 @@ namespace FarmManager.Models
             return listaVacas;
         }
 
-        public abstract List<Vaca> VacasParaInseminar();
+        public abstract List<Gado> VacasParaInseminar();
 
-        public abstract List<Vaca> VacasParaTrazerParaProcriar();
+        public abstract List<Gado> VacasParaTrazerParaProcriar();
 
-        public abstract List<Vaca> VacasParaProcriar();
+        public abstract List<Gado> VacasParaProcriar();
 
-        public abstract List<Vaca> VacasParaDesamamentar();
+        public abstract List<Gado> VacasParaDesamamentar();
     }
 }
