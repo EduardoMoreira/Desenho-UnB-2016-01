@@ -14,6 +14,7 @@ namespace FarmManager.Controllers
     public class TerraPlantioController : Controller
     {
         private FarmContext db = new FarmContext();
+        private CriacaoTerra criacaoTerraPlantio = new CriacaoTerraPlantio();
 
         // GET: /TerraPlantio/
         public ActionResult Index()
@@ -51,8 +52,7 @@ namespace FarmManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.TerrasPlantios.Add(terraplantio);
-                db.SaveChanges();
+                criacaoTerraPlantio.criarTerra(terraplantio);
                 return RedirectToAction("Index");
             }
 
@@ -110,9 +110,8 @@ namespace FarmManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            TerraPlantio terraplantio = db.TerrasPlantios.Find(id);
-            db.TerrasPlantios.Remove(terraplantio);
-            db.SaveChanges();
+            TerraPlantio terraPlantio = db.TerrasPlantios.Find(id);
+            criacaoTerraPlantio.excluirTerra(terraPlantio);
             return RedirectToAction("Index");
         }
 

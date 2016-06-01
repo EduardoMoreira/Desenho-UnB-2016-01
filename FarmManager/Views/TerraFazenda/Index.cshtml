@@ -1,0 +1,30 @@
+﻿@model IEnumerable<FarmManager.Models.Terra>
+
+@{
+    ViewBag.Title = "ListaTerra";
+}
+
+<h2>Lista de Terras</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Tipo de Terra
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NRHectares)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GetType().Name.ToString())
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NRHectares)
+        </td>
+    </tr>
+}
+
+</table>

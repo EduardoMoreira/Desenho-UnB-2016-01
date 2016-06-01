@@ -14,6 +14,7 @@ namespace FarmManager.Controllers
     public class PiqueteController : Controller
     {
         private FarmContext db = new FarmContext();
+        private CriacaoTerra criacaoPiquete = new CriacaoPiquete();
 
         // GET: /Piquete/
         public ActionResult Index()
@@ -51,8 +52,7 @@ namespace FarmManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Piquetes.Add(piquete);
-                db.SaveChanges();
+                criacaoPiquete.criarTerra(piquete);
                 return RedirectToAction("Index");
             }
 
@@ -111,8 +111,7 @@ namespace FarmManager.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Piquete piquete = db.Piquetes.Find(id);
-            db.Piquetes.Remove(piquete);
-            db.SaveChanges();
+            criacaoPiquete.excluirTerra(piquete);
             return RedirectToAction("Index");
         }
 

@@ -18,6 +18,6 @@ namespace FarmManager.Models
         public DateTime? DTColheita { get; set; }
 
         [Display(Name = "Tipo de Grão")]
-        public Grao TPGrao { get; set; }
+        public TipoGrao TPGrao { get; set; }
     }
 }

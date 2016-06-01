@@ -38,5 +38,7 @@ namespace FarmManager.DAL
         public DbSet<Milho> Milhos { get; set; }
 
         public DbSet<MovimentacaoGrao> MovimentacaoGraos { get; set; }
+
+        public DbSet<TerraFazenda> TerraFazenda { get; set; }
     }
 }

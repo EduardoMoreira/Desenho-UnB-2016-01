@@ -1,0 +1,22 @@
+﻿@model FarmManager.Models.TerraFazenda
+
+@{
+    ViewBag.Title = "DadosTerra";
+}
+
+<h2>Dados sobre a Fazenda</h2>
+
+<div>
+    <h4>Território da Fazenda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NRHectares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRHectares)
+        </dd>
+
+    </dl>
+</div>
