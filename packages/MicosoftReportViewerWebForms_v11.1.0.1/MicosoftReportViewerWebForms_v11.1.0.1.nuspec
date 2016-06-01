@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MicosoftReportViewerWebForms_v11</id>
+    <version>1.0.1</version>
+    <title>Micosoft.ReportViewer.WebForms v 11.0.0.0</title>
+    <authors>AErdman</authors>
+    <owners>AErdman</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This dll is required for the use of Microsoft's forms based ReportViewer control. This version is to be used with VS 2012.</description>
+    <summary>This dll is required for the use of Microsoft's forms based ReportViewer control.</summary>
+  </metadata>
+</package>
