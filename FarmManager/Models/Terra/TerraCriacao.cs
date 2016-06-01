@@ -9,10 +9,10 @@ namespace FarmManager.Models
 {
     public abstract class TerraCriacao : Terra
     {
-        [Display(Name = "Vacas presentes")]
-        public int NRVacasAlocadas { get; set; }
+        [Display(Name = "Gados presentes")]
+        public int NRGadosAlocadas { get; set; }
 
         [Display(Name = "Capacidade máxima")]
-        public int NRMaximoVacas { get; set; }
+        public int NRMaximoGados { get; set; }
     }
 }

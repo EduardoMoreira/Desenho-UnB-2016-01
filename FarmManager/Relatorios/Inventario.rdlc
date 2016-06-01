@@ -119,21 +119,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="NRMaximoVacas">
+                    <Textbox Name="NRMaximoGados">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NRMaximoVacas.Value</Value>
+                              <Value>=Fields!NRMaximoGados.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>NRMaximoVacas</rd:DefaultName>
+                      <rd:DefaultName>NRMaximoGados</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -197,7 +197,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!NRMaximoVacas.Value)</Value>
+                              <Value>=Sum(Fields!NRMaximoGados.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -720,7 +720,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DSVaca</DataSetName>
+        <DataSetName>DSGado</DataSetName>
         <SortExpressions>
           <SortExpression>
             <Value>=Fields!NRBrinco.Value</Value>
@@ -1338,8 +1338,8 @@
           <DataField>TPTerra</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="NRMaximoVacas">
-          <DataField>NRMaximoVacas</DataField>
+        <Field Name="NRMaximoGados">
+          <DataField>NRMaximoGados</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1352,7 +1352,7 @@
         <rd:TableAdapterName>TerraTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DSVaca">
+    <DataSet Name="DSGado">
       <Query>
         <DataSourceName>DSInventario</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1386,10 +1386,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DSInventario</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Omar\Documents\GitHub\Desenho-UnB-2016-01\FarmManager\Relatorios\DSInventario.xsd</rd:SchemaPath>
-        <rd:TableName>Vaca</rd:TableName>
+        <rd:TableName>Gado</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>VacaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>GadoTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DSEquipamentoRural">

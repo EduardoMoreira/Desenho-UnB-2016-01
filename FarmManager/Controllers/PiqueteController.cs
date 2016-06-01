@@ -48,7 +48,7 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="CDTerra,NRVacasAlocadas,NRMaximoVacas,NRHectares")] Piquete piquete)
+        public ActionResult Create([Bind(Include="CDTerra,NRGadosAlocadas,NRMaximoGados,NRHectares")] Piquete piquete)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="CDTerra,NRVacasAlocadas,NRMaximoVacas,NRHectares")] Piquete piquete)
+        public ActionResult Edit([Bind(Include="CDTerra,NRGadosAlocadas,NRMaximoGados,NRHectares")] Piquete piquete)
         {
             if (ModelState.IsValid)
             {

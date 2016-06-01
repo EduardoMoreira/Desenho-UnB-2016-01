@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            Vacas presentes
+            Gados presentes
         </th>
         <th>
             Capacidade máxima
@@ -26,10 +26,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.NRVacasAlocadas)
+            @Html.DisplayFor(modelItem => item.NRGadosAlocadas)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NRMaximoVacas)
+            @Html.DisplayFor(modelItem => item.NRMaximoGados)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.NRHectares)

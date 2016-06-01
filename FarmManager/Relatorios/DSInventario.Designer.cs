@@ -26,7 +26,7 @@ namespace FarmManager.Relatorios {
         
         private TerraDataTable tableTerra;
         
-        private VacaDataTable tableVaca;
+        private GadoDataTable tableGado;
         
         private EquipamentoRuralDataTable tableEquipamentoRural;
         
@@ -61,8 +61,8 @@ namespace FarmManager.Relatorios {
                 if ((ds.Tables["Terra"] != null)) {
                     base.Tables.Add(new TerraDataTable(ds.Tables["Terra"]));
                 }
-                if ((ds.Tables["Vaca"] != null)) {
-                    base.Tables.Add(new VacaDataTable(ds.Tables["Vaca"]));
+                if ((ds.Tables["Gado"] != null)) {
+                    base.Tables.Add(new GadoDataTable(ds.Tables["Gado"]));
                 }
                 if ((ds.Tables["EquipamentoRural"] != null)) {
                     base.Tables.Add(new EquipamentoRuralDataTable(ds.Tables["EquipamentoRural"]));
@@ -99,9 +99,9 @@ namespace FarmManager.Relatorios {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public VacaDataTable Vaca {
+        public GadoDataTable Gado {
             get {
-                return this.tableVaca;
+                return this.tableGado;
             }
         }
         
@@ -185,8 +185,8 @@ namespace FarmManager.Relatorios {
                 if ((ds.Tables["Terra"] != null)) {
                     base.Tables.Add(new TerraDataTable(ds.Tables["Terra"]));
                 }
-                if ((ds.Tables["Vaca"] != null)) {
-                    base.Tables.Add(new VacaDataTable(ds.Tables["Vaca"]));
+                if ((ds.Tables["Gado"] != null)) {
+                    base.Tables.Add(new GadoDataTable(ds.Tables["Gado"]));
                 }
                 if ((ds.Tables["EquipamentoRural"] != null)) {
                     base.Tables.Add(new EquipamentoRuralDataTable(ds.Tables["EquipamentoRural"]));
@@ -230,10 +230,10 @@ namespace FarmManager.Relatorios {
                     this.tableTerra.InitVars();
                 }
             }
-            this.tableVaca = ((VacaDataTable)(base.Tables["Vaca"]));
+            this.tableGado = ((GadoDataTable)(base.Tables["Gado"]));
             if ((initTable == true)) {
-                if ((this.tableVaca != null)) {
-                    this.tableVaca.InitVars();
+                if ((this.tableGado != null)) {
+                    this.tableGado.InitVars();
                 }
             }
             this.tableEquipamentoRural = ((EquipamentoRuralDataTable)(base.Tables["EquipamentoRural"]));
@@ -254,8 +254,8 @@ namespace FarmManager.Relatorios {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTerra = new TerraDataTable();
             base.Tables.Add(this.tableTerra);
-            this.tableVaca = new VacaDataTable();
-            base.Tables.Add(this.tableVaca);
+            this.tableGado = new GadoDataTable();
+            base.Tables.Add(this.tableGado);
             this.tableEquipamentoRural = new EquipamentoRuralDataTable();
             base.Tables.Add(this.tableEquipamentoRural);
         }
@@ -268,7 +268,7 @@ namespace FarmManager.Relatorios {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeVaca() {
+        private bool ShouldSerializeGado() {
             return false;
         }
         
@@ -337,7 +337,7 @@ namespace FarmManager.Relatorios {
         public delegate void TerraRowChangeEventHandler(object sender, TerraRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void VacaRowChangeEventHandler(object sender, VacaRowChangeEvent e);
+        public delegate void GadoRowChangeEventHandler(object sender, GadoRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void EquipamentoRuralRowChangeEventHandler(object sender, EquipamentoRuralRowChangeEvent e);
@@ -357,7 +357,7 @@ namespace FarmManager.Relatorios {
             
             private global::System.Data.DataColumn columnTPTerra;
             
-            private global::System.Data.DataColumn columnNRMaximoVacas;
+            private global::System.Data.DataColumn columnNRMaximoGados;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -426,9 +426,9 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NRMaximoVacasColumn {
+            public global::System.Data.DataColumn NRMaximoGadosColumn {
                 get {
-                    return this.columnNRMaximoVacas;
+                    return this.columnNRMaximoGados;
                 }
             }
             
@@ -469,14 +469,14 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TerraRow AddTerraRow(int TPGrao, int NRHectares, string TPTerra, string NRMaximoVacas) {
+            public TerraRow AddTerraRow(int TPGrao, int NRHectares, string TPTerra, string NRMaximoGados) {
                 TerraRow rowTerraRow = ((TerraRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TPGrao,
                         NRHectares,
                         TPTerra,
-                        NRMaximoVacas};
+                        NRMaximoGados};
                 rowTerraRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTerraRow);
                 return rowTerraRow;
@@ -510,7 +510,7 @@ namespace FarmManager.Relatorios {
                 this.columnTPGrao = base.Columns["TPGrao"];
                 this.columnNRHectares = base.Columns["NRHectares"];
                 this.columnTPTerra = base.Columns["TPTerra"];
-                this.columnNRMaximoVacas = base.Columns["NRMaximoVacas"];
+                this.columnNRMaximoGados = base.Columns["NRMaximoGados"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -524,8 +524,8 @@ namespace FarmManager.Relatorios {
                 base.Columns.Add(this.columnNRHectares);
                 this.columnTPTerra = new global::System.Data.DataColumn("TPTerra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTPTerra);
-                this.columnNRMaximoVacas = new global::System.Data.DataColumn("NRMaximoVacas", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNRMaximoVacas);
+                this.columnNRMaximoGados = new global::System.Data.DataColumn("NRMaximoGados", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNRMaximoGados);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCDTerra}, true));
                 this.columnCDTerra.AutoIncrement = true;
@@ -667,7 +667,7 @@ namespace FarmManager.Relatorios {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class VacaDataTable : global::System.Data.TypedTableBase<VacaRow> {
+        public partial class GadoDataTable : global::System.Data.TypedTableBase<GadoRow> {
             
             private global::System.Data.DataColumn columnNRBrinco;
             
@@ -683,8 +683,8 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VacaDataTable() {
-                this.TableName = "Vaca";
+            public GadoDataTable() {
+                this.TableName = "Gado";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -692,7 +692,7 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal VacaDataTable(global::System.Data.DataTable table) {
+            internal GadoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -709,7 +709,7 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected VacaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GadoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -773,34 +773,34 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VacaRow this[int index] {
+            public GadoRow this[int index] {
                 get {
-                    return ((VacaRow)(this.Rows[index]));
+                    return ((GadoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event VacaRowChangeEventHandler VacaRowChanging;
+            public event GadoRowChangeEventHandler GadoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event VacaRowChangeEventHandler VacaRowChanged;
+            public event GadoRowChangeEventHandler GadoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event VacaRowChangeEventHandler VacaRowDeleting;
+            public event GadoRowChangeEventHandler GadoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event VacaRowChangeEventHandler VacaRowDeleted;
+            public event GadoRowChangeEventHandler GadoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddVacaRow(VacaRow row) {
+            public void AddGadoRow(GadoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VacaRow AddVacaRow(int NRBrinco, System.DateTime DTNascimento, int TPSexo, System.DateTime DTInseminacao, System.DateTime DTDesamamentacao, System.DateTime DTProcriacao) {
-                VacaRow rowVacaRow = ((VacaRow)(this.NewRow()));
+            public GadoRow AddGadoRow(int NRBrinco, System.DateTime DTNascimento, int TPSexo, System.DateTime DTInseminacao, System.DateTime DTDesamamentacao, System.DateTime DTProcriacao) {
+                GadoRow rowGadoRow = ((GadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NRBrinco,
                         DTNascimento,
@@ -808,22 +808,22 @@ namespace FarmManager.Relatorios {
                         DTInseminacao,
                         DTDesamamentacao,
                         DTProcriacao};
-                rowVacaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowVacaRow);
-                return rowVacaRow;
+                rowGadoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGadoRow);
+                return rowGadoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VacaRow FindByNRBrinco(int NRBrinco) {
-                return ((VacaRow)(this.Rows.Find(new object[] {
+            public GadoRow FindByNRBrinco(int NRBrinco) {
+                return ((GadoRow)(this.Rows.Find(new object[] {
                             NRBrinco})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                VacaDataTable cln = ((VacaDataTable)(base.Clone()));
+                GadoDataTable cln = ((GadoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -831,7 +831,7 @@ namespace FarmManager.Relatorios {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new VacaDataTable();
+                return new GadoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -870,28 +870,28 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VacaRow NewVacaRow() {
-                return ((VacaRow)(this.NewRow()));
+            public GadoRow NewGadoRow() {
+                return ((GadoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new VacaRow(builder);
+                return new GadoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(VacaRow);
+                return typeof(GadoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.VacaRowChanged != null)) {
-                    this.VacaRowChanged(this, new VacaRowChangeEvent(((VacaRow)(e.Row)), e.Action));
+                if ((this.GadoRowChanged != null)) {
+                    this.GadoRowChanged(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -899,8 +899,8 @@ namespace FarmManager.Relatorios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.VacaRowChanging != null)) {
-                    this.VacaRowChanging(this, new VacaRowChangeEvent(((VacaRow)(e.Row)), e.Action));
+                if ((this.GadoRowChanging != null)) {
+                    this.GadoRowChanging(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -908,8 +908,8 @@ namespace FarmManager.Relatorios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.VacaRowDeleted != null)) {
-                    this.VacaRowDeleted(this, new VacaRowChangeEvent(((VacaRow)(e.Row)), e.Action));
+                if ((this.GadoRowDeleted != null)) {
+                    this.GadoRowDeleted(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -917,14 +917,14 @@ namespace FarmManager.Relatorios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.VacaRowDeleting != null)) {
-                    this.VacaRowDeleting(this, new VacaRowChangeEvent(((VacaRow)(e.Row)), e.Action));
+                if ((this.GadoRowDeleting != null)) {
+                    this.GadoRowDeleting(this, new GadoRowChangeEvent(((GadoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveVacaRow(VacaRow row) {
+            public void RemoveGadoRow(GadoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -951,7 +951,7 @@ namespace FarmManager.Relatorios {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "VacaDataTable";
+                attribute2.FixedValue = "GadoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1379,17 +1379,17 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NRMaximoVacas {
+            public string NRMaximoGados {
                 get {
                     try {
-                        return ((string)(this[this.tableTerra.NRMaximoVacasColumn]));
+                        return ((string)(this[this.tableTerra.NRMaximoGadosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NRMaximoVacas\' in table \'Terra\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NRMaximoGados\' in table \'Terra\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTerra.NRMaximoVacasColumn] = value;
+                    this[this.tableTerra.NRMaximoGadosColumn] = value;
                 }
             }
             
@@ -1407,39 +1407,39 @@ namespace FarmManager.Relatorios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNRMaximoVacasNull() {
-                return this.IsNull(this.tableTerra.NRMaximoVacasColumn);
+            public bool IsNRMaximoGadosNull() {
+                return this.IsNull(this.tableTerra.NRMaximoGadosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNRMaximoVacasNull() {
-                this[this.tableTerra.NRMaximoVacasColumn] = global::System.Convert.DBNull;
+            public void SetNRMaximoGadosNull() {
+                this[this.tableTerra.NRMaximoGadosColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class VacaRow : global::System.Data.DataRow {
+        public partial class GadoRow : global::System.Data.DataRow {
             
-            private VacaDataTable tableVaca;
+            private GadoDataTable tableGado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal VacaRow(global::System.Data.DataRowBuilder rb) : 
+            internal GadoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableVaca = ((VacaDataTable)(this.Table));
+                this.tableGado = ((GadoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int NRBrinco {
                 get {
-                    return ((int)(this[this.tableVaca.NRBrincoColumn]));
+                    return ((int)(this[this.tableGado.NRBrincoColumn]));
                 }
                 set {
-                    this[this.tableVaca.NRBrincoColumn] = value;
+                    this[this.tableGado.NRBrincoColumn] = value;
                 }
             }
             
@@ -1447,10 +1447,10 @@ namespace FarmManager.Relatorios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime DTNascimento {
                 get {
-                    return ((global::System.DateTime)(this[this.tableVaca.DTNascimentoColumn]));
+                    return ((global::System.DateTime)(this[this.tableGado.DTNascimentoColumn]));
                 }
                 set {
-                    this[this.tableVaca.DTNascimentoColumn] = value;
+                    this[this.tableGado.DTNascimentoColumn] = value;
                 }
             }
             
@@ -1458,10 +1458,10 @@ namespace FarmManager.Relatorios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int TPSexo {
                 get {
-                    return ((int)(this[this.tableVaca.TPSexoColumn]));
+                    return ((int)(this[this.tableGado.TPSexoColumn]));
                 }
                 set {
-                    this[this.tableVaca.TPSexoColumn] = value;
+                    this[this.tableGado.TPSexoColumn] = value;
                 }
             }
             
@@ -1470,14 +1470,14 @@ namespace FarmManager.Relatorios {
             public System.DateTime DTInseminacao {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableVaca.DTInseminacaoColumn]));
+                        return ((global::System.DateTime)(this[this.tableGado.DTInseminacaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DTInseminacao\' in table \'Vaca\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DTInseminacao\' in table \'Gado\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVaca.DTInseminacaoColumn] = value;
+                    this[this.tableGado.DTInseminacaoColumn] = value;
                 }
             }
             
@@ -1486,14 +1486,14 @@ namespace FarmManager.Relatorios {
             public System.DateTime DTDesamamentacao {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableVaca.DTDesamamentacaoColumn]));
+                        return ((global::System.DateTime)(this[this.tableGado.DTDesamamentacaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DTDesamamentacao\' in table \'Vaca\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DTDesamamentacao\' in table \'Gado\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVaca.DTDesamamentacaoColumn] = value;
+                    this[this.tableGado.DTDesamamentacaoColumn] = value;
                 }
             }
             
@@ -1502,51 +1502,51 @@ namespace FarmManager.Relatorios {
             public System.DateTime DTProcriacao {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableVaca.DTProcriacaoColumn]));
+                        return ((global::System.DateTime)(this[this.tableGado.DTProcriacaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DTProcriacao\' in table \'Vaca\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DTProcriacao\' in table \'Gado\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableVaca.DTProcriacaoColumn] = value;
+                    this[this.tableGado.DTProcriacaoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDTInseminacaoNull() {
-                return this.IsNull(this.tableVaca.DTInseminacaoColumn);
+                return this.IsNull(this.tableGado.DTInseminacaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDTInseminacaoNull() {
-                this[this.tableVaca.DTInseminacaoColumn] = global::System.Convert.DBNull;
+                this[this.tableGado.DTInseminacaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDTDesamamentacaoNull() {
-                return this.IsNull(this.tableVaca.DTDesamamentacaoColumn);
+                return this.IsNull(this.tableGado.DTDesamamentacaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDTDesamamentacaoNull() {
-                this[this.tableVaca.DTDesamamentacaoColumn] = global::System.Convert.DBNull;
+                this[this.tableGado.DTDesamamentacaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDTProcriacaoNull() {
-                return this.IsNull(this.tableVaca.DTProcriacaoColumn);
+                return this.IsNull(this.tableGado.DTProcriacaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDTProcriacaoNull() {
-                this[this.tableVaca.DTProcriacaoColumn] = global::System.Convert.DBNull;
+                this[this.tableGado.DTProcriacaoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1675,22 +1675,22 @@ namespace FarmManager.Relatorios {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class VacaRowChangeEvent : global::System.EventArgs {
+        public class GadoRowChangeEvent : global::System.EventArgs {
             
-            private VacaRow eventRow;
+            private GadoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VacaRowChangeEvent(VacaRow row, global::System.Data.DataRowAction action) {
+            public GadoRowChangeEvent(GadoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VacaRow Row {
+            public GadoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2041,7 +2041,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class VacaTableAdapter : global::System.ComponentModel.Component {
+    public partial class GadoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2055,7 +2055,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public VacaTableAdapter() {
+        public GadoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2152,7 +2152,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Vaca";
+            tableMapping.DataSetTable = "Gado";
             tableMapping.ColumnMappings.Add("NRBrinco", "NRBrinco");
             tableMapping.ColumnMappings.Add("DTNascimento", "DTNascimento");
             tableMapping.ColumnMappings.Add("TPSexo", "TPSexo");
@@ -2162,12 +2162,12 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Vaca] WHERE (([NRBrinco] = @Original_NRBrinco))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Gado] WHERE (([NRBrinco] = @Original_NRBrinco))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NRBrinco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NRBrinco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Vaca] ([NRBrinco], [DTNascimento], [TPSexo], [DTInseminacao], " +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Gado] ([NRBrinco], [DTNascimento], [TPSexo], [DTInseminacao], " +
                 "[DTDesamamentacao], [DTProcriacao]) VALUES (@NRBrinco, @DTNascimento, @TPSexo, @" +
                 "DTInseminacao, @DTDesamamentacao, @DTProcriacao)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
@@ -2179,7 +2179,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DTProcriacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DTProcriacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Vaca] SET [NRBrinco] = @NRBrinco, [DTNascimento] = @DTNascimento, [" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Gado] SET [NRBrinco] = @NRBrinco, [DTNascimento] = @DTNascimento, [" +
                 "TPSexo] = @TPSexo, [DTInseminacao] = @DTInseminacao, [DTDesamamentacao] = @DTDes" +
                 "amamentacao, [DTProcriacao] = @DTProcriacao WHERE (([NRBrinco] = @Original_NRBri" +
                 "nco))";
@@ -2207,7 +2207,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT NRBrinco, DTNascimento, TPSexo, DTInseminacao, DTDesamamentacao, DTProcria" +
-                "cao FROM dbo.Vaca";
+                "cao FROM dbo.Gado";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2215,7 +2215,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSInventario.VacaDataTable dataTable) {
+        public virtual int Fill(DSInventario.GadoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2228,9 +2228,9 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSInventario.VacaDataTable GetData() {
+        public virtual DSInventario.GadoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSInventario.VacaDataTable dataTable = new DSInventario.VacaDataTable();
+            DSInventario.GadoDataTable dataTable = new DSInventario.GadoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2238,7 +2238,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSInventario.VacaDataTable dataTable) {
+        public virtual int Update(DSInventario.GadoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2246,7 +2246,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSInventario dataSet) {
-            return this.Adapter.Update(dataSet, "Vaca");
+            return this.Adapter.Update(dataSet, "Gado");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2703,7 +2703,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
         
         private TerraTableAdapter _terraTableAdapter;
         
-        private VacaTableAdapter _vacaTableAdapter;
+        private GadoTableAdapter _gadoTableAdapter;
         
         private EquipamentoRuralTableAdapter _equipamentoRuralTableAdapter;
         
@@ -2741,12 +2741,12 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public VacaTableAdapter VacaTableAdapter {
+        public GadoTableAdapter GadoTableAdapter {
             get {
-                return this._vacaTableAdapter;
+                return this._gadoTableAdapter;
             }
             set {
-                this._vacaTableAdapter = value;
+                this._gadoTableAdapter = value;
             }
         }
         
@@ -2787,9 +2787,9 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                             && (this._terraTableAdapter.Connection != null))) {
                     return this._terraTableAdapter.Connection;
                 }
-                if (((this._vacaTableAdapter != null) 
-                            && (this._vacaTableAdapter.Connection != null))) {
-                    return this._vacaTableAdapter.Connection;
+                if (((this._gadoTableAdapter != null) 
+                            && (this._gadoTableAdapter.Connection != null))) {
+                    return this._gadoTableAdapter.Connection;
                 }
                 if (((this._equipamentoRuralTableAdapter != null) 
                             && (this._equipamentoRuralTableAdapter.Connection != null))) {
@@ -2811,7 +2811,7 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                 if ((this._terraTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._vacaTableAdapter != null)) {
+                if ((this._gadoTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._equipamentoRuralTableAdapter != null)) {
@@ -2837,12 +2837,12 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._vacaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Vaca.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._gadoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Gado.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._vacaTableAdapter.Update(updatedRows));
+                    result = (result + this._gadoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -2873,11 +2873,11 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._vacaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Vaca.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._gadoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Gado.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._vacaTableAdapter.Update(addedRows));
+                    result = (result + this._gadoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -2907,11 +2907,11 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._vacaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Vaca.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._gadoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Gado.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._vacaTableAdapter.Update(deletedRows));
+                    result = (result + this._gadoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -2967,8 +2967,8 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._vacaTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._vacaTableAdapter.Connection) == false))) {
+            if (((this._gadoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gadoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -3018,13 +3018,13 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._terraTableAdapter.Adapter);
                     }
                 }
-                if ((this._vacaTableAdapter != null)) {
-                    revertConnections.Add(this._vacaTableAdapter, this._vacaTableAdapter.Connection);
-                    this._vacaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._vacaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._vacaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._vacaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._vacaTableAdapter.Adapter);
+                if ((this._gadoTableAdapter != null)) {
+                    revertConnections.Add(this._gadoTableAdapter, this._gadoTableAdapter.Connection);
+                    this._gadoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gadoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gadoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gadoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gadoTableAdapter.Adapter);
                     }
                 }
                 if ((this._equipamentoRuralTableAdapter != null)) {
@@ -3098,9 +3098,9 @@ namespace FarmManager.Relatorios.DSInventarioTableAdapters {
                     this._terraTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._terraTableAdapter]));
                     this._terraTableAdapter.Transaction = null;
                 }
-                if ((this._vacaTableAdapter != null)) {
-                    this._vacaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._vacaTableAdapter]));
-                    this._vacaTableAdapter.Transaction = null;
+                if ((this._gadoTableAdapter != null)) {
+                    this._gadoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gadoTableAdapter]));
+                    this._gadoTableAdapter.Transaction = null;
                 }
                 if ((this._equipamentoRuralTableAdapter != null)) {
                     this._equipamentoRuralTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._equipamentoRuralTableAdapter]));

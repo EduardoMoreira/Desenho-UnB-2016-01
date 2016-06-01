@@ -11,7 +11,7 @@ namespace FarmManager.DAL
     {
         protected override void Seed(FarmContext context)
         {
-            var vacas = new List<Gado>
+            var gados = new List<Gado>
             {
                 new Gado{NRBrinco = 1, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-09-01"), DTDesamamentacao = DateTime.Parse("2016-05-01")},
                 new Gado{NRBrinco = 2, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-10-01"), DTDesamamentacao = DateTime.Parse("2016-04-10")},
@@ -23,7 +23,7 @@ namespace FarmManager.DAL
                 new Gado{NRBrinco = 8, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2013-04-01")}
             };
 
-            vacas.ForEach(s => context.Vacas.Add(s));
+            gados.ForEach(s => context.Gados.Add(s));
 
             var equipamentos = new List<EquipamentoRural>
             {

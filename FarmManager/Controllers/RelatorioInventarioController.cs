@@ -19,7 +19,7 @@ namespace FarmManager.Controllers
         private DataTable dataTablePiquete;
         private DataTable dataTableTerraNua;
         private DataTable dataTableTerraPlantio;
-        private DataTable dataTableVaca;
+        private DataTable dataTableGado;
 
         #endregion
 
@@ -85,12 +85,12 @@ namespace FarmManager.Controllers
             }
         }
 
-        //Vaca
-        public DataTable DataTableVaca
+        //Gado
+        public DataTable DataTableGado
         {
             get
             {
-                return ConvertToDatatable(db.Vacas.ToList());
+                return ConvertToDatatable(db.Gados.ToList());
             }
         }
 
@@ -118,7 +118,7 @@ namespace FarmManager.Controllers
             DataTableTerra.Merge(DataTablePiquete);
             DataTableTerra.Merge(DataTableTerraNua);
             viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSTerra", DataTableTerra));
-            viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSVaca", DataTableVaca));
+            viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSGado", DataTableGado));
             viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSEquipamentoRural", DataTableEquipamentoRural));
 
             viewer.SizeToReportContent = true;

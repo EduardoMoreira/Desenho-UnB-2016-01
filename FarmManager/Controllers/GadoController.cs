@@ -19,7 +19,7 @@ namespace FarmManager.Controllers
         // GET: /Gado/
         public ActionResult Index()
         {
-            return View(db.Vacas.ToList());
+            return View(db.Gados.ToList());
         }
 
         // GET: /Gado/Details/5
@@ -29,12 +29,12 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Gado vaca = db.Vacas.Find(id);
-            if (vaca == null)
+            Gado gado = db.Gados.Find(id);
+            if (gado == null)
             {
                 return HttpNotFound();
             }
-            return View(vaca);
+            return View(gado);
         }
 
         // GET: /Gado/Create
@@ -48,13 +48,13 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado vaca)
+        public ActionResult Create([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado gado)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    db.Vacas.Add(vaca);
+                    db.Gados.Add(gado);
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
@@ -74,10 +74,10 @@ namespace FarmManager.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine("Erro ao criar vaca: " + e.Message);
+                Console.WriteLine("Erro ao criar gado: " + e.Message);
             }
 
-            return View(vaca);
+            return View(gado);
         }
 
         // GET: /Gado/Edit/5
@@ -87,12 +87,12 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Gado vaca = db.Vacas.Find(id);
-            if (vaca == null)
+            Gado gado = db.Gados.Find(id);
+            if (gado == null)
             {
                 return HttpNotFound();
             }
-            return View(vaca);
+            return View(gado);
         }
 
         // POST: /Gado/Edit/5
@@ -100,15 +100,15 @@ namespace FarmManager.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado vaca)
+        public ActionResult Edit([Bind(Include="NRBrinco,DTNascimento,TPSexo,DTInseminacao,DTDesamamentacao,DTProcriacao")] Gado gado)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(vaca).State = EntityState.Modified;
+                db.Entry(gado).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(vaca);
+            return View(gado);
         }
 
         // GET: /Gado/Delete/5
@@ -118,12 +118,12 @@ namespace FarmManager.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Gado vaca = db.Vacas.Find(id);
-            if (vaca == null)
+            Gado gado = db.Gados.Find(id);
+            if (gado == null)
             {
                 return HttpNotFound();
             }
-            return View(vaca);
+            return View(gado);
         }
 
         // POST: /Gado/Delete/5
@@ -131,8 +131,8 @@ namespace FarmManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Gado vaca = db.Vacas.Find(id);
-            db.Vacas.Remove(vaca);
+            Gado gado = db.Gados.Find(id);
+            db.Gados.Remove(gado);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -141,16 +141,16 @@ namespace FarmManager.Controllers
         public ActionResult PlanoCicloSemanal()
         {
             PlanoCiclo plano = new PlanoCicloSemanal();
-            IList<IList<Gado>> listaVacas = plano.RetornaListaVacas();
-            return View(listaVacas);
+            IList<IList<Gado>> listaGados = plano.RetornaListaGados();
+            return View(listaGados);
         }
 
         // GET: /Gado/PlanoCicloMensal
         public ActionResult PlanoCicloMensal()
         {
             PlanoCiclo plano = new PlanoCicloMensal();
-            IList<IList<Gado>> listaVacas = plano.RetornaListaVacas();
-            return View(listaVacas);
+            IList<IList<Gado>> listaGados = plano.RetornaListaGados();
+            return View(listaGados);
         }
 
         protected override void Dispose(bool disposing)

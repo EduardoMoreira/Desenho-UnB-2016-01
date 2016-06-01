@@ -7,31 +7,31 @@ namespace FarmManager.Models
 {
     public abstract class PlanoCiclo
     {
-        public IList<IList<Gado>> RetornaListaVacas()
+        public IList<IList<Gado>> RetornaListaGados()
         {
-            IList<IList<Gado>> listaVacas = new List<IList<Gado>>();
+            IList<IList<Gado>> listaGados = new List<IList<Gado>>();
 
-            var listaVacasInseminacao = VacasParaInseminar();
-            listaVacas.Add(listaVacasInseminacao);
+            var listaGadosInseminacao = GadosParaInseminar();
+            listaGados.Add(listaGadosInseminacao);
 
-            var listaVacasTrazerParaProcriacao = VacasParaTrazerParaProcriar();
-            listaVacas.Add(listaVacasTrazerParaProcriacao);
+            var listaGadosTrazerParaProcriacao = GadosParaTrazerParaProcriar();
+            listaGados.Add(listaGadosTrazerParaProcriacao);
 
-            var listaVacasProcriacao = VacasParaProcriar();
-            listaVacas.Add(listaVacasProcriacao);
+            var listaGadosProcriacao = GadosParaProcriar();
+            listaGados.Add(listaGadosProcriacao);
 
-            var listaVacasDesamamentacao = VacasParaDesamamentar();
-            listaVacas.Add(listaVacasDesamamentacao);
+            var listaGadosDesamamentacao = GadosParaDesamamentar();
+            listaGados.Add(listaGadosDesamamentacao);
 
-            return listaVacas;
+            return listaGados;
         }
 
-        public abstract List<Gado> VacasParaInseminar();
+        public abstract List<Gado> GadosParaInseminar();
 
-        public abstract List<Gado> VacasParaTrazerParaProcriar();
+        public abstract List<Gado> GadosParaTrazerParaProcriar();
 
-        public abstract List<Gado> VacasParaProcriar();
+        public abstract List<Gado> GadosParaProcriar();
 
-        public abstract List<Gado> VacasParaDesamamentar();
+        public abstract List<Gado> GadosParaDesamamentar();
     }
 }

@@ -10,52 +10,52 @@ namespace FarmManager.Models
     {
         FarmContext db = new FarmContext();
 
-        public override List<Gado> VacasParaInseminar()
+        public override List<Gado> GadosParaInseminar()
         {
-            var listaVacasInseminacao = db.Vacas.ToList();
+            var listaGadosInseminacao = db.Gados.ToList();
 
-            listaVacasInseminacao = listaVacasInseminacao.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoInseminacao.Month == DateTime.Now.Month).ToList();
+            listaGadosInseminacao = listaGadosInseminacao.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoInseminacao.Month == DateTime.Now.Month).ToList();
 
-            return listaVacasInseminacao;
+            return listaGadosInseminacao;
         }
 
-        public override List<Gado> VacasParaTrazerParaProcriar()
+        public override List<Gado> GadosParaTrazerParaProcriar()
         {
-            var listaVacasTrazerProcriar = db.Vacas.ToList();
+            var listaGadosTrazerProcriar = db.Gados.ToList();
 
-            listaVacasTrazerProcriar = listaVacasTrazerProcriar.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoTrazerProcriacao.Month == DateTime.Now.Month).ToList();
+            listaGadosTrazerProcriar = listaGadosTrazerProcriar.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoTrazerProcriacao.Month == DateTime.Now.Month).ToList();
 
-            return listaVacasTrazerProcriar;
+            return listaGadosTrazerProcriar;
         }
 
-        public override List<Gado> VacasParaProcriar()
+        public override List<Gado> GadosParaProcriar()
         {
-            var listaVacasProcriar = db.Vacas.ToList();
+            var listaGadosProcriar = db.Gados.ToList();
 
-            listaVacasProcriar = listaVacasProcriar.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoProcriacao.Month == DateTime.Now.Month).ToList();
+            listaGadosProcriar = listaGadosProcriar.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoProcriacao.Month == DateTime.Now.Month).ToList();
 
-            return listaVacasProcriar;
+            return listaGadosProcriar;
         }
 
-        public override List<Gado> VacasParaDesamamentar()
+        public override List<Gado> GadosParaDesamamentar()
         {
-            var listaVacasDesamamentar = db.Vacas.ToList();
+            var listaGadosDesamamentar = db.Gados.ToList();
 
-            listaVacasDesamamentar = listaVacasDesamamentar.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoDesamamentacao.Month == DateTime.Now.Month).ToList();
+            listaGadosDesamamentar = listaGadosDesamamentar.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoDesamamentacao.Month == DateTime.Now.Month).ToList();
 
-            return listaVacasDesamamentar;
+            return listaGadosDesamamentar;
         }
     }
 }

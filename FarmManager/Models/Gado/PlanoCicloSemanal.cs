@@ -10,56 +10,56 @@ namespace FarmManager.Models
     {
         FarmContext db = new FarmContext();
 
-        public override List<Gado> VacasParaInseminar()
+        public override List<Gado> GadosParaInseminar()
         {
-            var listaVacasInseminacao = db.Vacas.ToList();
+            var listaGadosInseminacao = db.Gados.ToList();
 
-            listaVacasInseminacao = listaVacasInseminacao.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoInseminacao.Day >= DateTime.Now.Day &&
-                              vaca.DTPrevisaoInseminacao.Day < DateTime.Now.AddDays(7).Day).ToList();
+            listaGadosInseminacao = listaGadosInseminacao.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoInseminacao.Day >= DateTime.Now.Day &&
+                              gado.DTPrevisaoInseminacao.Day < DateTime.Now.AddDays(7).Day).ToList();
 
-            return listaVacasInseminacao;
+            return listaGadosInseminacao;
         }
 
-        public override List<Gado> VacasParaTrazerParaProcriar()
+        public override List<Gado> GadosParaTrazerParaProcriar()
         {
-            var listaVacasTrazerProcriar = db.Vacas.ToList();
+            var listaGadosTrazerProcriar = db.Gados.ToList();
 
-            listaVacasTrazerProcriar = listaVacasTrazerProcriar.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoTrazerProcriacao.Day >= DateTime.Now.Day &&
-                              vaca.DTPrevisaoTrazerProcriacao.Day < DateTime.Now.AddDays(7).Day).ToList();
+            listaGadosTrazerProcriar = listaGadosTrazerProcriar.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoTrazerProcriacao.Day >= DateTime.Now.Day &&
+                              gado.DTPrevisaoTrazerProcriacao.Day < DateTime.Now.AddDays(7).Day).ToList();
 
-            return listaVacasTrazerProcriar;
+            return listaGadosTrazerProcriar;
         }
 
-        public override List<Gado> VacasParaProcriar()
+        public override List<Gado> GadosParaProcriar()
         {
-            var listaVacasProcriar = db.Vacas.ToList();
+            var listaGadosProcriar = db.Gados.ToList();
 
-            listaVacasProcriar = listaVacasProcriar.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoProcriacao.Day >= DateTime.Now.Day &&
-                              vaca.DTPrevisaoProcriacao.Day < DateTime.Now.AddDays(7).Day).ToList();
+            listaGadosProcriar = listaGadosProcriar.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoProcriacao.Day >= DateTime.Now.Day &&
+                              gado.DTPrevisaoProcriacao.Day < DateTime.Now.AddDays(7).Day).ToList();
 
-            return listaVacasProcriar;
+            return listaGadosProcriar;
         }
 
-        public override List<Gado> VacasParaDesamamentar()
+        public override List<Gado> GadosParaDesamamentar()
         {
-            var listaVacasDesamamentar = db.Vacas.ToList();
+            var listaGadosDesamamentar = db.Gados.ToList();
 
-            listaVacasDesamamentar = listaVacasDesamamentar.
-                Where(vaca => vaca.DTDesamamentacao != null &&
-                              vaca.DTDesamamentacao != DateTime.MinValue &&
-                              vaca.DTPrevisaoDesamamentacao.Day >= DateTime.Now.Day &&
-                              vaca.DTPrevisaoDesamamentacao.Day < DateTime.Now.AddDays(7).Day).ToList();
+            listaGadosDesamamentar = listaGadosDesamamentar.
+                Where(gado => gado.DTDesamamentacao != null &&
+                              gado.DTDesamamentacao != DateTime.MinValue &&
+                              gado.DTPrevisaoDesamamentacao.Day >= DateTime.Now.Day &&
+                              gado.DTPrevisaoDesamamentacao.Day < DateTime.Now.AddDays(7).Day).ToList();
 
-            return listaVacasDesamamentar;
+            return listaGadosDesamamentar;
         }
     }
 }
