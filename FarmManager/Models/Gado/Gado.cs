@@ -24,15 +24,15 @@ namespace FarmManager.Models
         [Display(Name = "Sexo")]
         public Sexo TPSexo { get; set; }
         
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         [Display(Name = "Data de Inseminação")]
         public DateTime? DTInseminacao { get; set; }
 
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         [Display(Name = "Data de Desamamentação")]
         public DateTime? DTDesamamentacao { get; set; }
 
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         [Display(Name = "Data de Procriação")]
         public DateTime? DTProcriacao { get; set; }
 

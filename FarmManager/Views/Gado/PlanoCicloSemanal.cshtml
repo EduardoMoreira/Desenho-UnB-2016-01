@@ -4,7 +4,7 @@
     ViewBag.Title = "PlanoCicloSemanal";
 }
 
-<h2>Plano de Ciclo Semanal</h2>
+<h2>Plano de Ciclo Semanal (@DateTime.Now.Date.ToString("dd/MM") - @DateTime.Now.AddDays(7).ToString("dd/MM"))</h2>
 
 @if (Model[0].Count > 0)
 {
@@ -41,7 +41,7 @@
 
 else
 {
-    <p>Não há gado para ser inseminada</p>
+    <p>Não há gado para ser inseminado</p>
 }
 
 @if (Model[1].Count > 0)
