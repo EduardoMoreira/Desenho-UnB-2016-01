@@ -1,0 +1,4 @@
+languages:
+   C#: true
+exclude_paths:
+- "**.js"
