@@ -19,7 +19,9 @@ namespace FarmManager.Controllers
         private DataTable dataTablePiquete;
         private DataTable dataTableTerraNua;
         private DataTable dataTableTerraPlantio;
+        private DataTable dataTableTerra;
         private DataTable dataTableGado;
+        private DataTable dataTableGrao;
 
         #endregion
 
@@ -85,6 +87,20 @@ namespace FarmManager.Controllers
             }
         }
 
+        //TerraDePlantio
+        public DataTable DataTableTerra
+        {
+            get
+            {
+                DataTable DataTableTerra = new DataTable();
+                DataTableTerra.Merge(DataTablePasto);
+                DataTableTerra.Merge(DataTableTerraPlantio);
+                DataTableTerra.Merge(DataTablePiquete);
+                DataTableTerra.Merge(DataTableTerraNua);
+                return DataTableTerra;
+            }
+        }
+
         //Gado
         public DataTable DataTableGado
         {
@@ -103,6 +119,26 @@ namespace FarmManager.Controllers
             }
         }
 
+        //Grao
+        public DataTable DataTableGrao
+        {
+            get
+            {
+                var dtMilho = ConvertToDatatable(db.Milhos.ToList());
+                System.Data.DataColumn colunaDEGraoMilho = new System.Data.DataColumn("DEGrao", typeof(System.String));
+                colunaDEGraoMilho.DefaultValue = "Milho";
+                dtMilho.Columns.Add(colunaDEGraoMilho);
+                var dtSoja = ConvertToDatatable(db.Sojas.ToList());
+                System.Data.DataColumn colunaDEGraoSoja = new System.Data.DataColumn("DEGrao", typeof(System.String));
+                colunaDEGraoSoja.DefaultValue = "Soja";
+                dtSoja.Columns.Add(colunaDEGraoSoja);
+                DataTable DataTableGrao = new DataTable();
+                DataTableGrao.Merge(dtMilho);
+                DataTableGrao.Merge(dtSoja);
+                return DataTableGrao;
+            }
+        }
+
         #endregion
 
         #region metodos
@@ -112,14 +148,10 @@ namespace FarmManager.Controllers
             var viewer = new Microsoft.Reporting.WebForms.ReportViewer();
             viewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
             viewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Relatorios\Inventario.rdlc";
-            DataTable DataTableTerra = new DataTable();
-            DataTableTerra.Merge(DataTablePasto);
-            DataTableTerra.Merge(DataTableTerraPlantio);
-            DataTableTerra.Merge(DataTablePiquete);
-            DataTableTerra.Merge(DataTableTerraNua);
             viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSTerra", DataTableTerra));
             viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSGado", DataTableGado));
             viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSEquipamentoRural", DataTableEquipamentoRural));
+            viewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource("DSGrao", DataTableGrao));
 
             viewer.SizeToReportContent = true;
             viewer.Width = System.Web.UI.WebControls.Unit.Percentage(100);

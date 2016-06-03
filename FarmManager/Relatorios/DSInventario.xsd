@@ -169,7 +169,7 @@ FROM            EquipamentoRural</CommandText>
   <xs:element name="DSInventario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSInventario" msprop:Generator_UserDSName="DSInventario">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Terra" msprop:Generator_TableClassName="TerraDataTable" msprop:Generator_TableVarName="tableTerra" msprop:Generator_RowChangedName="TerraRowChanged" msprop:Generator_TablePropName="Terra" msprop:Generator_RowDeletingName="TerraRowDeleting" msprop:Generator_RowChangingName="TerraRowChanging" msprop:Generator_RowEvHandlerName="TerraRowChangeEventHandler" msprop:Generator_RowDeletedName="TerraRowDeleted" msprop:Generator_RowClassName="TerraRow" msprop:Generator_UserTableName="Terra" msprop:Generator_RowEvArgName="TerraRowChangeEvent">
+        <xs:element name="Terra" msprop:Generator_TableClassName="TerraDataTable" msprop:Generator_TableVarName="tableTerra" msprop:Generator_TablePropName="Terra" msprop:Generator_RowDeletingName="TerraRowDeleting" msprop:Generator_RowChangingName="TerraRowChanging" msprop:Generator_RowEvHandlerName="TerraRowChangeEventHandler" msprop:Generator_RowDeletedName="TerraRowDeleted" msprop:Generator_UserTableName="Terra" msprop:Generator_RowChangedName="TerraRowChanged" msprop:Generator_RowEvArgName="TerraRowChangeEvent" msprop:Generator_RowClassName="TerraRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CDTerra" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCDTerra" msprop:Generator_ColumnPropNameInRow="CDTerra" msprop:Generator_ColumnPropNameInTable="CDTerraColumn" msprop:Generator_UserColumnName="CDTerra" type="xs:int" />
@@ -180,7 +180,7 @@ FROM            EquipamentoRural</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Gado" msprop:Generator_TableClassName="GadoDataTable" msprop:Generator_TableVarName="tableGado" msprop:Generator_RowChangedName="GadoRowChanged" msprop:Generator_TablePropName="Gado" msprop:Generator_RowDeletingName="GadoRowDeleting" msprop:Generator_RowChangingName="GadoRowChanging" msprop:Generator_RowEvHandlerName="GadoRowChangeEventHandler" msprop:Generator_RowDeletedName="GadoRowDeleted" msprop:Generator_RowClassName="GadoRow" msprop:Generator_UserTableName="Gado" msprop:Generator_RowEvArgName="GadoRowChangeEvent">
+        <xs:element name="Gado" msprop:Generator_TableClassName="GadoDataTable" msprop:Generator_TableVarName="tableGado" msprop:Generator_TablePropName="Gado" msprop:Generator_RowDeletingName="GadoRowDeleting" msprop:Generator_RowChangingName="GadoRowChanging" msprop:Generator_RowEvHandlerName="GadoRowChangeEventHandler" msprop:Generator_RowDeletedName="GadoRowDeleted" msprop:Generator_UserTableName="Gado" msprop:Generator_RowChangedName="GadoRowChanged" msprop:Generator_RowEvArgName="GadoRowChangeEvent" msprop:Generator_RowClassName="GadoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NRBrinco" msprop:Generator_ColumnVarNameInTable="columnNRBrinco" msprop:Generator_ColumnPropNameInRow="NRBrinco" msprop:Generator_ColumnPropNameInTable="NRBrincoColumn" msprop:Generator_UserColumnName="NRBrinco" type="xs:int" />
@@ -192,7 +192,7 @@ FROM            EquipamentoRural</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EquipamentoRural" msprop:Generator_TableClassName="EquipamentoRuralDataTable" msprop:Generator_TableVarName="tableEquipamentoRural" msprop:Generator_TablePropName="EquipamentoRural" msprop:Generator_RowDeletingName="EquipamentoRuralRowDeleting" msprop:Generator_RowChangingName="EquipamentoRuralRowChanging" msprop:Generator_RowEvHandlerName="EquipamentoRuralRowChangeEventHandler" msprop:Generator_RowDeletedName="EquipamentoRuralRowDeleted" msprop:Generator_UserTableName="EquipamentoRural" msprop:Generator_RowChangedName="EquipamentoRuralRowChanged" msprop:Generator_RowEvArgName="EquipamentoRuralRowChangeEvent" msprop:Generator_RowClassName="EquipamentoRuralRow">
+        <xs:element name="EquipamentoRural" msprop:Generator_TableClassName="EquipamentoRuralDataTable" msprop:Generator_TableVarName="tableEquipamentoRural" msprop:Generator_RowChangedName="EquipamentoRuralRowChanged" msprop:Generator_TablePropName="EquipamentoRural" msprop:Generator_RowDeletingName="EquipamentoRuralRowDeleting" msprop:Generator_RowChangingName="EquipamentoRuralRowChanging" msprop:Generator_RowEvHandlerName="EquipamentoRuralRowChangeEventHandler" msprop:Generator_RowDeletedName="EquipamentoRuralRowDeleted" msprop:Generator_RowClassName="EquipamentoRuralRow" msprop:Generator_UserTableName="EquipamentoRural" msprop:Generator_RowEvArgName="EquipamentoRuralRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CDEquipamentoRural" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCDEquipamentoRural" msprop:Generator_ColumnPropNameInRow="CDEquipamentoRural" msprop:Generator_ColumnPropNameInTable="CDEquipamentoRuralColumn" msprop:Generator_UserColumnName="CDEquipamentoRural" type="xs:int" />
@@ -206,6 +206,15 @@ FROM            EquipamentoRural</CommandText>
               </xs:element>
               <xs:element name="STAlugado" msprop:Generator_ColumnVarNameInTable="columnSTAlugado" msprop:Generator_ColumnPropNameInRow="STAlugado" msprop:Generator_ColumnPropNameInTable="STAlugadoColumn" msprop:Generator_UserColumnName="STAlugado" type="xs:boolean" />
               <xs:element name="DTCompra" msprop:Generator_ColumnVarNameInTable="columnDTCompra" msprop:Generator_ColumnPropNameInRow="DTCompra" msprop:Generator_ColumnPropNameInTable="DTCompraColumn" msprop:Generator_UserColumnName="DTCompra" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Grao" msprop:Generator_TableClassName="GraoDataTable" msprop:Generator_TableVarName="tableGrao" msprop:Generator_TablePropName="Grao" msprop:Generator_RowDeletingName="GraoRowDeleting" msprop:Generator_RowChangingName="GraoRowChanging" msprop:Generator_RowEvHandlerName="GraoRowChangeEventHandler" msprop:Generator_RowDeletedName="GraoRowDeleted" msprop:Generator_UserTableName="Grao" msprop:Generator_RowChangedName="GraoRowChanged" msprop:Generator_RowEvArgName="GraoRowChangeEvent" msprop:Generator_RowClassName="GraoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEGrao" msprop:Generator_ColumnVarNameInTable="columnDEGrao" msprop:Generator_ColumnPropNameInRow="DEGrao" msprop:Generator_ColumnPropNameInTable="DEGraoColumn" msprop:Generator_UserColumnName="DEGrao" type="xs:string" minOccurs="0" />
+              <xs:element name="NRQuantidade" msprop:Generator_ColumnVarNameInTable="columnNRQuantidade" msprop:Generator_ColumnPropNameInRow="NRQuantidade" msprop:Generator_ColumnPropNameInTable="NRQuantidadeColumn" msprop:Generator_UserColumnName="NRQuantidade" type="xs:int" minOccurs="0" />
+              <xs:element name="DTAtualizacao" msprop:Generator_ColumnVarNameInTable="columnDTAtualizacao" msprop:Generator_ColumnPropNameInRow="DTAtualizacao" msprop:Generator_ColumnPropNameInTable="DTAtualizacaoColumn" msprop:Generator_UserColumnName="DTAtualizacao" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
