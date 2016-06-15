@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmManager", "FarmManager\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmManager.Tests", "FarmManager.Tests\FarmManager.Tests.csproj", "{91BC2646-F962-49A0-8C9C-65103B5400A0}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FarmManager.Dados", "FarmManager.Dados\FarmManager.Dados.sqlproj", "{1FAE5B2F-28E8-4859-BB39-08AEE0A89F33}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +21,6 @@ Global
 		{91BC2646-F962-49A0-8C9C-65103B5400A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91BC2646-F962-49A0-8C9C-65103B5400A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91BC2646-F962-49A0-8C9C-65103B5400A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FAE5B2F-28E8-4859-BB39-08AEE0A89F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FAE5B2F-28E8-4859-BB39-08AEE0A89F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FAE5B2F-28E8-4859-BB39-08AEE0A89F33}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{1FAE5B2F-28E8-4859-BB39-08AEE0A89F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FAE5B2F-28E8-4859-BB39-08AEE0A89F33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FAE5B2F-28E8-4859-BB39-08AEE0A89F33}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,14 +13,14 @@ namespace FarmManager.DAL
         {
             var gados = new List<Gado>
             {
-                new Gado{NRBrinco = 1, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-09-01"), DTDesamamentacao = DateTime.Parse("2016-05-01"), STAtivo = false},
-                new Gado{NRBrinco = 2, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-10-01"), DTDesamamentacao = DateTime.Parse("2016-04-10"), STAtivo = false},
-                new Gado{NRBrinco = 3, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2006-02-01"), DTDesamamentacao = DateTime.Parse("2016-04-15"), STAtivo = true},
-                new Gado{NRBrinco = 4, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2007-03-01")},
-                new Gado{NRBrinco = 5, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2008-03-01")},
-                new Gado{NRBrinco = 6, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2009-03-01")},
-                new Gado{NRBrinco = 7, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2010-03-01")},
-                new Gado{NRBrinco = 8, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2013-04-01")}
+                new Gado{NRBrinco = 1, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-09-01"), DTDesamamentacao = DateTime.Parse("2016-05-01"), STAtivo = STAtivo.Sim},
+                new Gado{NRBrinco = 2, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2005-10-01"), DTDesamamentacao = DateTime.Parse("2016-04-10"), STAtivo = STAtivo.Sim},
+                new Gado{NRBrinco = 3, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2006-02-01"), DTDesamamentacao = DateTime.Parse("2016-04-15"), STAtivo = STAtivo.Sim},
+                new Gado{NRBrinco = 4, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2007-03-01"), DTDesamamentacao = DateTime.Parse("2016-04-15"), STAtivo = STAtivo.Sim},
+                new Gado{NRBrinco = 5, TPSexo = Sexo.Masculino, DTNascimento = DateTime.Parse("2008-03-01"), DTDesamamentacao = DateTime.Parse("2016-04-15"), STAtivo = STAtivo.Sim},
+                new Gado{NRBrinco = 6, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2009-03-01"), DTDesamamentacao = DateTime.Parse("2016-04-15"), STAtivo = STAtivo.Sim},
+                new Gado{NRBrinco = 7, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2010-03-01"), DTDesamamentacao = DateTime.Parse("2016-04-15"), STAtivo = STAtivo.Sim},
+                new Gado{NRBrinco = 8, TPSexo = Sexo.Feminino, DTNascimento = DateTime.Parse("2013-04-01"), DTDesamamentacao = DateTime.Parse("2016-04-15"), STAtivo = STAtivo.Sim}
             };
 
             gados.ForEach(s => context.Gados.Add(s));
