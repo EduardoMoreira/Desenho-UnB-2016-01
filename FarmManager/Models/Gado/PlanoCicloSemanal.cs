@@ -15,7 +15,8 @@ namespace FarmManager.Models
             var listaGadosInseminacao = db.Gados.ToList();
 
             listaGadosInseminacao = listaGadosInseminacao.
-                Where(gado => gado.DTDesamamentacao != null &&
+                Where(gado => gado.STAtivo == STAtivo.Sim &&
+                              gado.DTDesamamentacao != null &&
                               gado.DTDesamamentacao != DateTime.MinValue &&
                               gado.DTPrevisaoInseminacao.Day >= DateTime.Now.Day &&
                               gado.DTPrevisaoInseminacao.Day < DateTime.Now.AddDays(7).Day).ToList();
@@ -28,7 +29,8 @@ namespace FarmManager.Models
             var listaGadosTrazerProcriar = db.Gados.ToList();
 
             listaGadosTrazerProcriar = listaGadosTrazerProcriar.
-                Where(gado => gado.DTDesamamentacao != null &&
+                Where(gado => gado.STAtivo == STAtivo.Sim &&
+                              gado.DTDesamamentacao != null &&
                               gado.DTDesamamentacao != DateTime.MinValue &&
                               gado.DTPrevisaoTrazerProcriacao.Day >= DateTime.Now.Day &&
                               gado.DTPrevisaoTrazerProcriacao.Day < DateTime.Now.AddDays(7).Day).ToList();
@@ -41,7 +43,8 @@ namespace FarmManager.Models
             var listaGadosProcriar = db.Gados.ToList();
 
             listaGadosProcriar = listaGadosProcriar.
-                Where(gado => gado.DTDesamamentacao != null &&
+                Where(gado => gado.STAtivo == STAtivo.Sim &&
+                              gado.DTDesamamentacao != null &&
                               gado.DTDesamamentacao != DateTime.MinValue &&
                               gado.DTPrevisaoProcriacao.Day >= DateTime.Now.Day &&
                               gado.DTPrevisaoProcriacao.Day < DateTime.Now.AddDays(7).Day).ToList();
@@ -54,7 +57,8 @@ namespace FarmManager.Models
             var listaGadosDesamamentar = db.Gados.ToList();
 
             listaGadosDesamamentar = listaGadosDesamamentar.
-                Where(gado => gado.DTDesamamentacao != null &&
+                Where(gado => gado.STAtivo == STAtivo.Sim &&
+                              gado.DTDesamamentacao != null &&
                               gado.DTDesamamentacao != DateTime.MinValue &&
                               gado.DTPrevisaoDesamamentacao.Day >= DateTime.Now.Day &&
                               gado.DTPrevisaoDesamamentacao.Day < DateTime.Now.AddDays(7).Day).ToList();

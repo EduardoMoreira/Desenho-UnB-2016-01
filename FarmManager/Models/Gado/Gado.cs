@@ -8,6 +8,12 @@ namespace FarmManager.Models
     {
         Masculino, Feminino
     }
+    public enum STAtivo
+    {
+        Não, Sim
+    }
+
+
     public class Gado
     {
         [Key]
@@ -37,7 +43,7 @@ namespace FarmManager.Models
         public DateTime? DTProcriacao { get; set; }
 
         [Display(Name = "O animal existe atualmente na propriedade?")]
-        public bool STAtivo { get; set; }
+        public STAtivo STAtivo { get; set; }
 
         public DateTime DTPrevisaoInseminacao
         {

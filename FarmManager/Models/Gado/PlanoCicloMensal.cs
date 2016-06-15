@@ -15,7 +15,8 @@ namespace FarmManager.Models
             var listaGadosInseminacao = db.Gados.ToList();
 
             listaGadosInseminacao = listaGadosInseminacao.
-                Where(gado => gado.DTDesamamentacao != null &&
+                Where(gado => gado.STAtivo == STAtivo.Sim &&
+                              gado.DTDesamamentacao != null &&
                               gado.DTDesamamentacao != DateTime.MinValue &&
                               gado.DTPrevisaoInseminacao.Month == DateTime.Now.Month).ToList();
 
@@ -39,7 +40,8 @@ namespace FarmManager.Models
             var listaGadosProcriar = db.Gados.ToList();
 
             listaGadosProcriar = listaGadosProcriar.
-                Where(gado => gado.DTDesamamentacao != null &&
+                Where(gado => gado.STAtivo == STAtivo.Sim &&
+                              gado.DTDesamamentacao != null &&
                               gado.DTDesamamentacao != DateTime.MinValue &&
                               gado.DTPrevisaoProcriacao.Month == DateTime.Now.Month).ToList();
 
@@ -51,7 +53,8 @@ namespace FarmManager.Models
             var listaGadosDesamamentar = db.Gados.ToList();
 
             listaGadosDesamamentar = listaGadosDesamamentar.
-                Where(gado => gado.DTDesamamentacao != null &&
+                Where(gado => gado.STAtivo == STAtivo.Sim &&
+                              gado.DTDesamamentacao != null &&
                               gado.DTDesamamentacao != DateTime.MinValue &&
                               gado.DTPrevisaoDesamamentacao.Month == DateTime.Now.Month).ToList();
 

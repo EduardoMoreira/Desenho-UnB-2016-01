@@ -106,7 +106,7 @@ namespace FarmManager.Controllers
         {
             get
             {
-                return ConvertToDatatable(db.Gados.ToList());
+                return ConvertToDatatable(db.Gados.ToList().Where(gado => gado.STAtivo == Models.STAtivo.Sim).ToList());
             }
         }
 
