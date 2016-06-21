@@ -6,10 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.53505cm</Width>
+              <Width>3.99908cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.95521cm</Width>
+              <Width>5.41924cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -238,7 +238,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>3.96403cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox30">
                     <CanGrow>true</CanGrow>
@@ -288,7 +288,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>3.96403cm</Size>
                 <CellContents>
                   <Textbox Name="TPTerra">
                     <CanGrow>true</CanGrow>
@@ -337,9 +337,9 @@
         </TablixRowHierarchy>
         <DataSetName>DSTerra</DataSetName>
         <Top>6.51551cm</Top>
-        <Left>6.59541cm</Left>
+        <Left>1.67006cm</Left>
         <Height>1.8cm</Height>
-        <Width>8.99026cm</Width>
+        <Width>13.38234cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -365,9 +365,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>5.80968cm</Top>
-        <Left>6.59541cm</Left>
+        <Left>1.67006cm</Left>
         <Height>0.67056cm</Height>
-        <Width>2.5cm</Width>
+        <Width>6.89208cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -383,10 +383,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.53505cm</Width>
+              <Width>3.99908cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.95521cm</Width>
+              <Width>5.41924cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -620,7 +620,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>3.96403cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox24">
                     <CanGrow>true</CanGrow>
@@ -670,7 +670,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.5cm</Size>
+                <Size>3.96403cm</Size>
                 <CellContents>
                   <Textbox Name="TPSexo1">
                     <CanGrow>true</CanGrow>
@@ -727,9 +727,9 @@
           </SortExpression>
         </SortExpressions>
         <Top>9.30961cm</Top>
-        <Left>6.56036cm</Left>
+        <Left>1.63501cm</Left>
         <Height>1.8cm</Height>
-        <Width>8.99026cm</Width>
+        <Width>13.38234cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -757,9 +757,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>8.67433cm</Top>
-        <Left>6.59541cm</Left>
+        <Left>1.67006cm</Left>
         <Height>0.63528cm</Height>
-        <Width>2.5cm</Width>
+        <Width>6.89208cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -775,13 +775,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.98507cm</Width>
+              <Width>4.4491cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.98507cm</Width>
+              <Width>4.4491cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.98507cm</Width>
+              <Width>4.4491cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1120,9 +1120,9 @@
         </TablixRowHierarchy>
         <DataSetName>DSEquipamentoRural</DataSetName>
         <Top>3.66572cm</Top>
-        <Left>6.56036cm</Left>
+        <Left>1.63501cm</Left>
         <Height>1.8cm</Height>
-        <Width>8.95521cm</Width>
+        <Width>13.34729cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -1149,9 +1149,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>2.87169cm</Top>
-        <Left>6.56036cm</Left>
+        <Left>1.63501cm</Left>
         <Height>0.72347cm</Height>
-        <Width>5cm</Width>
+        <Width>9.39208cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -1182,9 +1182,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>0.49898cm</Top>
-        <Left>6.56036cm</Left>
+        <Left>1.63501cm</Left>
         <Height>0.62646cm</Height>
-        <Width>5cm</Width>
+        <Width>9.39208cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -1200,13 +1200,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.96403cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.47014cm</Width>
+              <Width>4.93417cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.98507cm</Width>
+              <Width>4.4491cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1432,9 +1432,9 @@
         </TablixRowHierarchy>
         <DataSetName>DSGrao</DataSetName>
         <Top>1.30183cm</Top>
-        <Left>6.52531cm</Left>
+        <Left>1.59996cm</Left>
         <Height>1.2cm</Height>
-        <Width>8.95521cm</Width>
+        <Width>13.34729cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -1446,7 +1446,7 @@
     <Height>4.80442in</Height>
     <Style />
   </Body>
-  <Width>7.6416in</Width>
+  <Width>6.52789in</Width>
   <Page>
     <PageHeader>
       <Height>2.18432cm</Height>
@@ -1457,7 +1457,6 @@
           <Source>Embedded</Source>
           <Value>Logo</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>2.86409cm</Left>
           <Height>1.94097cm</Height>
           <Width>3.59021cm</Width>
           <Style>
@@ -1487,7 +1486,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Left>6.59541cm</Left>
+          <Left>3.7666cm</Left>
           <Height>1.04979cm</Height>
           <Width>9.47139cm</Width>
           <ZIndex>1</ZIndex>
@@ -1522,7 +1521,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox46</rd:DefaultName>
-          <Left>16.24319cm</Left>
+          <Left>13.41438cm</Left>
           <Height>0.6cm</Height>
           <Width>3.16647cm</Width>
           <ZIndex>2</ZIndex>
@@ -1557,7 +1556,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox47</rd:DefaultName>
           <Top>0.77639cm</Top>
-          <Left>16.24319cm</Left>
+          <Left>13.41438cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>3</ZIndex>

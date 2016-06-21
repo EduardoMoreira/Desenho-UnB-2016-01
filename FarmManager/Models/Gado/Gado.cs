@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -44,6 +45,8 @@ namespace FarmManager.Models
 
         [Display(Name = "O animal existe atualmente na propriedade?")]
         public STAtivo STAtivo { get; set; }
+
+        public virtual List<Ordenha> Ordenhas { get; set; }
 
         public DateTime DTPrevisaoInseminacao
         {
