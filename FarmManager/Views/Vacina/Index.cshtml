@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FarmManager.Models.Vacina>
+
+@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista</h2>
+
+<p>
+    @Html.ActionLink("Incluir Vacina", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DTAplicacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEVacina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEObservacao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTAplicacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEVacina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEObservacao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CDVacina }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CDVacina }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.CDVacina })
+        </td>
+    </tr>
+}
+
+</table>
