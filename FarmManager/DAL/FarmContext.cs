@@ -42,5 +42,7 @@ namespace FarmManager.DAL
         public DbSet<TerraFazenda> TerraFazenda { get; set; }
 
         public DbSet<Ordenha> Ordenhas { get; set; }
+
+        public DbSet<Vacina> Vacinas { get; set; }
     }
 }
