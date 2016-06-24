@@ -195,8 +195,10 @@
     <Compile Include="Controllers\TerraNuaController.cs" />
     <Compile Include="Controllers\TerraPlantioController.cs" />
     <Compile Include="Controllers\GadoController.cs" />
+    <Compile Include="Controllers\VacinaController.cs" />
     <Compile Include="DAL\FarmContext.cs" />
     <Compile Include="DAL\FarmSeed.cs" />
+    <Compile Include="Models\Gado\Vacina.cs" />
     <Compile Include="Models\Terra\Criação\CriacaoTerraNua.cs" />
     <Compile Include="Models\Terra\Criação\CriacaoTerraPlantio.cs" />
     <Compile Include="Models\Terra\Criação\CriacaoPiquete.cs" />
@@ -359,10 +361,14 @@
     <Content Include="Views\Gado\PlanoCicloSemanal.cshtml" />
     <Content Include="Views\TerraFazenda\Details.cshtml" />
     <Content Include="Views\TerraFazenda\Index.cshtml" />
+    <Content Include="Views\Vacina\Create.cshtml" />
+    <Content Include="Views\Vacina\Delete.cshtml" />
+    <Content Include="Views\Vacina\Details.cshtml" />
+    <Content Include="Views\Vacina\Edit.cshtml" />
+    <Content Include="Views\Vacina\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Terra\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

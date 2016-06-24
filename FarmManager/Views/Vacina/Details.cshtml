@@ -1,0 +1,43 @@
+﻿@model FarmManager.Models.Vacina
+
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Vacina</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTAplicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTAplicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEVacina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEVacina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEObservacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEObservacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CDVacina }) |
+    @Html.ActionLink("Voltar para Lista", "Index")
+</p>
