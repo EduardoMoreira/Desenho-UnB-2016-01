@@ -1,0 +1,50 @@
+﻿@model FarmManager.Models.Ordenha
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Ordenha</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.CDOrdenha)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VLLeite, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VLLeite)
+                @Html.ValidationMessageFor(model => model.VLLeite)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DTOrdenha, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DTOrdenha)
+                @Html.ValidationMessageFor(model => model.DTOrdenha)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar para listagem", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
