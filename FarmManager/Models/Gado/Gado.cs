@@ -46,6 +46,8 @@ namespace FarmManager.Models
         [Display(Name = "O animal existe atualmente na propriedade?")]
         public STAtivo STAtivo { get; set; }
 
+        public virtual List<Ordenha> Ordenhas { get; set; }
+
         public virtual List<Vacina> Vacinas { get; set; }
 
         public DateTime DTPrevisaoInseminacao
